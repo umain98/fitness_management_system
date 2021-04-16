@@ -5,6 +5,7 @@
  */
 package com.fms.entity;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 /**
@@ -12,17 +13,21 @@ import java.sql.Timestamp;
  * @author ASUS
  */
 public class Schedule {
-    //schedule_id, schedule_created_by_id, schedule_created_by_name, schedule_start_date, schedule_end_date, schedule_days_per_week, schedule_for, schedule_special_note, schedule_status, schedule_detail
+
+    //schedule_id, schedule_created_by_id, schedule_created_by_name,
+    //schedule_start_date, schedule_end_date, schedule_days_per_week,
+    //schedule_for, schedule_special_note, schedule_status, schedule_detail
     private int scheduleId;
     private int createdById;
     private String createdByName;
-    private Timestamp startDate;
-    private Timestamp endDate;
+    private Date startDate;
+    private Date endDate;
     private int daysPerWeek;
     private String scheduleFor;
     private String specialNote;
     private Character status;
     private String detail;
+    
 
     /**
      * @return the scheduleId
@@ -64,34 +69,6 @@ public class Schedule {
      */
     public void setCreatedByName(String createdByName) {
         this.createdByName = createdByName;
-    }
-
-    /**
-     * @return the startDate
-     */
-    public Timestamp getStartDate() {
-        return startDate;
-    }
-
-    /**
-     * @param startDate the startDate to set
-     */
-    public void setStartDate(Timestamp startDate) {
-        this.startDate = startDate;
-    }
-
-    /**
-     * @return the endDate
-     */
-    public Timestamp getEndDate() {
-        return endDate;
-    }
-
-    /**
-     * @param endDate the endDate to set
-     */
-    public void setEndDate(Timestamp endDate) {
-        this.endDate = endDate;
     }
 
     /**
@@ -163,6 +140,33 @@ public class Schedule {
     public void setDetail(String detail) {
         this.detail = detail;
     }
-    
-    
+
+    /**
+     * @return the startDate
+     */
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    /**
+     * @param startDate the startDate to set
+     */
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    /**
+     * @return the endDate
+     */
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    /**
+     * @param endDate the endDate to set
+     */
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
 }

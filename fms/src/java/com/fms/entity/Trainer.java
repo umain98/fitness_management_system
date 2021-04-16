@@ -12,7 +12,12 @@ import java.sql.Timestamp;
  * @author ASUS
  */
 public class Trainer {
-    //trainer_id, trainer_name, trainer_email, trainer_reg_date, trainer_contract_period_months, trainer_address, trainer_contact, trainer_detail, trainer_status
+
+    /*
+        trainer_id, trainer_name, trainer_email, trainer_reg_date, 
+    trainer_contract_period_months, trainer_address, trainer_contact, 
+    trainer_detail, trainer_status
+     */
     private int trainerId;
     private String trainerName;
     private String trainerEmail;
@@ -148,6 +153,5 @@ public class Trainer {
     public void setStatus(Character status) {
         this.status = status;
     }
-    
-    
+
 }

@@ -14,7 +14,12 @@ import java.sql.Timestamp;
  * @author ASUS
  */
 public class User {
-    //user_id, user_first_name, user_last_name, user_contact, user_email, user_address, user_reg_date, user_date_of_birth, user_height_cm, user_weight_kg, user_status, user_detail, user_password
+
+    /*
+        user_id, user_first_name, user_last_name, user_contact, user_email,
+    user_address, user_reg_date, user_date_of_birth, user_height_cm, 
+    user_weight_kg, user_status, user_detail, user_password
+     */
     private int userId;
     private String firstName;
     private String lastName;
@@ -210,6 +215,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    
+
 }

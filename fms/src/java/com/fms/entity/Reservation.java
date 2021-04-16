@@ -12,14 +12,16 @@ import java.sql.Timestamp;
  * @author ASUS
  */
 public class Reservation {
-    //reservation_id, reservation_type, reservation_date, reservation_time, reservation_user_id, reservation_user_name, reservation_status, reservation_detail
+
+    //reservation_id, reservation_type, reservation_date, reservation_time, 
+    //reservation_user_id, reservation_user_name, reservation_status, reservation_detail
     private int reservId;
     private String reservType;
     private Timestamp reservDate;
     private String reservTime;
     private int reservUserId;
     private String reservUserName;
-    private  Character status;
+    private Character status;
     private String detail;
 
     /**
@@ -133,6 +135,5 @@ public class Reservation {
     public void setDetail(String detail) {
         this.detail = detail;
     }
-    
-    
+
 }

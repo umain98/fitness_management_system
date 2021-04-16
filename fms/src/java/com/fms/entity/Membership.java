@@ -12,7 +12,11 @@ import java.math.BigDecimal;
  * @author ASUS
  */
 public class Membership {
-    //membership_plan_id, membership_plan_name, membership_plan_valid_period_month, membership_plan_personal_trainer, membership_plan_visit_count_month, membership_plan_price, membership_plan_detail, membership_plan_status
+
+    //membership_plan_id, membership_plan_name, membership_plan_valid_period_month,
+    //membership_plan_personal_trainer,
+    //membership_plan_visit_count_month, membership_plan_price, membership_plan_detail, 
+    //membership_plan_status
     private int planId;
     private String planName;
     private int validPeriodMonths;
@@ -20,7 +24,7 @@ public class Membership {
     private int visitCountMonth;
     private BigDecimal planPrice;
     private BigDecimal detail;
-    private Character  status;
+    private Character status;
 
     /**
      * @return the planId
@@ -134,7 +138,4 @@ public class Membership {
         this.status = status;
     }
 
-     
 }
-
-

@@ -10,11 +10,12 @@ package com.fms.entity;
  * @author ASUS
  */
 public class Gallery {
+
     //gallery_id, gallery_section, gallery_path, gallery_name
-      private int galleryId;
-      private String gallerySection;
-      private String galleryPath;
-      private String galleryName;
+    private int galleryId;
+    private String gallerySection;
+    private String galleryPath;
+    private String galleryName;
 
     /**
      * @return the galleryId
@@ -71,8 +72,5 @@ public class Gallery {
     public void setGalleryName(String galleryName) {
         this.galleryName = galleryName;
     }
-      
-      
-   
-    
+
 }
