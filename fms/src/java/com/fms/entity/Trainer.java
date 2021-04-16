@@ -26,7 +26,7 @@ public class Trainer {
     private String trainerAddress;
     private String trainerContact;
     private String detail;
-    private Character status;
+    private String status;
 
     /**
      * @return the trainerId
@@ -143,15 +143,17 @@ public class Trainer {
     /**
      * @return the status
      */
-    public Character getStatus() {
+    public String getStatus() {
         return status;
     }
 
     /**
      * @param status the status to set
      */
-    public void setStatus(Character status) {
+    public void setStatus(String status) {
         this.status = status;
     }
+
+    
 
 }

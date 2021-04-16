@@ -30,7 +30,7 @@ public class User {
     private Date dateOfBirth;
     private BigDecimal heightCm;
     private BigDecimal weightKg;
-    private Character status;
+    private String status;
     private String detail;
     private String password;
 
@@ -174,19 +174,7 @@ public class User {
         this.weightKg = weightKg;
     }
 
-    /**
-     * @return the status
-     */
-    public Character getStatus() {
-        return status;
-    }
-
-    /**
-     * @param status the status to set
-     */
-    public void setStatus(Character status) {
-        this.status = status;
-    }
+   
 
     /**
      * @return the detail
@@ -214,6 +202,20 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * @return the status
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 }

@@ -23,8 +23,8 @@ public class Membership {
     private int personalTrainer;
     private int visitCountMonth;
     private BigDecimal planPrice;
-    private BigDecimal detail;
-    private Character status;
+    private String detail;
+    private String status;
 
     /**
      * @return the planId
@@ -113,28 +113,28 @@ public class Membership {
     /**
      * @return the detail
      */
-    public BigDecimal getDetail() {
+    public String getDetail() {
         return detail;
     }
 
     /**
      * @param detail the detail to set
      */
-    public void setDetail(BigDecimal detail) {
+    public void setDetail(String detail) {
         this.detail = detail;
     }
 
     /**
      * @return the status
      */
-    public Character getStatus() {
+    public String getStatus() {
         return status;
     }
 
     /**
      * @param status the status to set
      */
-    public void setStatus(Character status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

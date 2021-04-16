@@ -21,7 +21,7 @@ public class Reservation {
     private String reservTime;
     private int reservUserId;
     private String reservUserName;
-    private Character status;
+    private String status;
     private String detail;
 
     /**
@@ -109,20 +109,6 @@ public class Reservation {
     }
 
     /**
-     * @return the status
-     */
-    public Character getStatus() {
-        return status;
-    }
-
-    /**
-     * @param status the status to set
-     */
-    public void setStatus(Character status) {
-        this.status = status;
-    }
-
-    /**
      * @return the detail
      */
     public String getDetail() {
@@ -134,6 +120,20 @@ public class Reservation {
      */
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+
+    /**
+     * @return the status
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 }

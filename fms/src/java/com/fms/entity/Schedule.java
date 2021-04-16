@@ -20,12 +20,12 @@ public class Schedule {
     private int scheduleId;
     private int createdById;
     private String createdByName;
-    private Date startDate;
-    private Date endDate;
+    private Timestamp startDate;
+    private Timestamp endDate;
     private int daysPerWeek;
     private String scheduleFor;
     private String specialNote;
-    private Character status;
+    private String status;
     private String detail;
     
 
@@ -113,19 +113,7 @@ public class Schedule {
         this.specialNote = specialNote;
     }
 
-    /**
-     * @return the status
-     */
-    public Character getStatus() {
-        return status;
-    }
-
-    /**
-     * @param status the status to set
-     */
-    public void setStatus(Character status) {
-        this.status = status;
-    }
+  
 
     /**
      * @return the detail
@@ -144,29 +132,47 @@ public class Schedule {
     /**
      * @return the startDate
      */
-    public Date getStartDate() {
+    public Timestamp getStartDate() {
         return startDate;
     }
 
     /**
      * @param startDate the startDate to set
      */
-    public void setStartDate(Date startDate) {
+    public void setStartDate(Timestamp startDate) {
         this.startDate = startDate;
     }
 
     /**
      * @return the endDate
      */
-    public Date getEndDate() {
+    public Timestamp getEndDate() {
         return endDate;
     }
 
     /**
      * @param endDate the endDate to set
      */
-    public void setEndDate(Date endDate) {
+    public void setEndDate(Timestamp endDate) {
         this.endDate = endDate;
     }
+
+    /**
+     * @return the status
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+  
+
+   
 
 }
