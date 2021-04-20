@@ -17,7 +17,7 @@ import java.sql.SQLException;
  */
 public class ScheduleImpl {
 
-    private String SelectQuery = "SELECT * FROM items";
+    private String SelectQuery = "SELECT * FROM schedules";
 
     /*
     schedule_id, schedule_created_by_id, schedule_created_by_name, schedule_start_date,
@@ -25,7 +25,7 @@ public class ScheduleImpl {
      */
     public boolean addSchedule(Schedule schedule) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("insert into(schedule_created_by_id, "
+        PreparedStatement ps = con.prepareStatement("insert into schedules(schedule_created_by_id, "
                 + "schedule_created_by_name, schedule_start_date,\n"
                 + "    schedule_end_date, schedule_days_per_week, schedule_for, schedule_special_note,"
                 + " schedule_status, schedule_detail) values (?,?,?,?,?,?,?,?,?)");

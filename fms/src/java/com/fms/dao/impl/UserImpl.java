@@ -17,7 +17,7 @@ import java.sql.SQLException;
  */
 public class UserImpl {
 
-    private String SelectQuery = "SELECT * FROM items";
+    private String SelectQuery = "SELECT * FROM users";
 
     /*
     user_id, user_first_name, user_last_name, user_contact, user_email, user_address,
@@ -25,7 +25,7 @@ public class UserImpl {
      */
     public boolean addUser(User user) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("insert into( user_first_name, user_last_name,"
+        PreparedStatement ps = con.prepareStatement("insert into users( user_first_name, user_last_name,"
                 + " user_contact, user_email, user_address,\n"
                 + "    user_reg_date, user_date_of_birth, user_height_cm, user_weight_kg, user_status,"
                 + " user_detail, user_password) values (?,?,?,?,?,?)");

@@ -1,0 +1,22 @@
+CREATE TABLE `fms_db`.`gallery` (
+  `gallery_id` INT NOT NULL AUTO_INCREMENT,
+  `gallery_section` VARCHAR(100) NULL,
+  `gallery_path` VARCHAR(450) NULL,
+  `gallery_name` VARCHAR(250) NULL,
+  PRIMARY KEY (`gallery_id`));
+
+CREATE TABLE `fms_db`.`items` (
+  `item_id` INT NOT NULL AUTO_INCREMENT,
+  `item_name` VARCHAR(250) NULL,
+  `item_category` VARCHAR(200) NULL,
+  `item_brand` VARCHAR(200) NULL,
+  `item_price` DECIMAL(10,2) NULL DEFAULT 0.00,
+  `item_status` VARCHAR(1) NULL,
+  `item_detail` VARCHAR(45) NULL,
+  PRIMARY KEY (`item_id`));
+
+ALTER TABLE `fms_db`.`items` 
+CHANGE COLUMN `item_detail` `item_detail` VARCHAR(450) NULL DEFAULT NULL ;
+
+
+

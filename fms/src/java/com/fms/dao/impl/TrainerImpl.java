@@ -17,7 +17,7 @@ import java.sql.SQLException;
  */
 public class TrainerImpl {
 
-    private String SelectQuery = "SELECT * FROM items";
+    private String SelectQuery = "SELECT * FROM trainers";
 
     /*
     trainer_id, trainer_name, trainer_email, trainer_reg_date, trainer_contract_period_months, 
@@ -25,7 +25,7 @@ public class TrainerImpl {
      */
     public boolean addTrainer(Trainer trainer) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("insert into( trainer_name, trainer_email,"
+        PreparedStatement ps = con.prepareStatement("insert into trainers(trainer_name, trainer_email,"
                 + " trainer_reg_date, trainer_contract_period_months, \n"
                 + "    trainer_address, trainer_contact, trainer_detail, trainer_status) values (?,?,?,?,?,?,?,?)");
         ps.setString(1, trainer.getTrainerName());

@@ -24,7 +24,7 @@ public class ItemImpl {
      */
     public boolean addItem(Item item) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("insert into(item_name, item_category, item_brand, item_price, item_status, item_detail) values (?,?,?,?,?,?)");
+        PreparedStatement ps = con.prepareStatement("insert into items(item_name, item_category, item_brand, item_price, item_status, item_detail) values (?,?,?,?,?,?)");
         ps.setString(1, item.getItemName());
         ps.setString(2, item.getItemCategory());
         ps.setString(3, item.getItemBrand());
