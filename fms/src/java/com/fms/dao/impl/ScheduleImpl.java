@@ -18,7 +18,7 @@ import java.sql.SQLException;
  */
 public class ScheduleImpl {
 
-    private String SelectQuery = "SELECT * FROM schedules";
+    private String selectQuery = "SELECT * FROM schedules";
 
     /*
     schedule_id, schedule_created_by_id, schedule_created_by_name, schedule_start_date,
@@ -44,6 +44,6 @@ public class ScheduleImpl {
         return true;
     }
      public ResultSet getAllScheduleItems() throws SQLException {
-        return new CommonDaoImpl().getAllRecords(SelectQuery);
+        return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 }

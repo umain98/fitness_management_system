@@ -28,7 +28,7 @@ public class UserImpl {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("insert into users( user_first_name, user_last_name,  "
                 + " user_contact, user_email, user_address,  user_reg_date, user_date_of_birth, user_height_cm, user_weight_kg, user_status, "
-                + " user_detail, user_password) values (?,?,?,?,?,?)");
+                + " user_detail, user_password) values (?,?,?,?,?,?,?,?,?,?,?,?)");
         ps.setString(1, user.getFirstName());
         ps.setString(2, user.getLastName());
         ps.setString(3, user.getContact());

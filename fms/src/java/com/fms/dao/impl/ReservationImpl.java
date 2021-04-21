@@ -18,7 +18,7 @@ import java.sql.SQLException;
  */
 public class ReservationImpl {
 
-    private String SelectQuery = "SELECT * FROM reservations";
+    private String selectQuery = "SELECT * FROM reservations";
 
     /*
     reservation_id, reservation_type, reservation_date, reservation_time,
@@ -44,6 +44,6 @@ public class ReservationImpl {
     }
 
     public ResultSet getAllReservationItems() throws SQLException {
-        return new CommonDaoImpl().getAllRecords(SelectQuery);
+        return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 }

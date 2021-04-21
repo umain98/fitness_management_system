@@ -18,7 +18,7 @@ import java.sql.SQLException;
  */
 public class MembershipImpl {
 
-    private String SelectQuery = "SELECT * FROM memberships";
+    private String selectQuery = "SELECT * FROM memberships";
 
     /*
     membership_plan_id, membership_plan_name, membership_plan_valid_period_month,
@@ -43,6 +43,6 @@ public class MembershipImpl {
     }
     
      public ResultSet getAllMembershipItems() throws SQLException {
-        return new CommonDaoImpl().getAllRecords(SelectQuery);
+        return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 }

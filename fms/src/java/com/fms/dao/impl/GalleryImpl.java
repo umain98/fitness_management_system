@@ -18,7 +18,7 @@ import java.sql.SQLException;
  */
 public class GalleryImpl {
 
-    private String SelectQuery = "SELECT * FROM gallery";
+    private String selectQuery = "SELECT * FROM gallery";
 
     /*
      gallery_id, gallery_section, gallery_path, gallery_name
@@ -35,6 +35,6 @@ public class GalleryImpl {
     }
 
     public ResultSet getAllGalleryItems() throws SQLException {
-        return new CommonDaoImpl().getAllRecords(SelectQuery);
+        return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 }
