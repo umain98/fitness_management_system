@@ -9,6 +9,7 @@ import com.fms.databaseconnecttion.DatabaseConnection;
 import com.fms.entity.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -17,7 +18,7 @@ import java.sql.SQLException;
  */
 public class UserImpl {
 
-    private String SelectQuery = "SELECT * FROM users";
+    private String selectQuery = "SELECT * FROM users";
 
     /*
     user_id, user_first_name, user_last_name, user_contact, user_email, user_address,
@@ -25,9 +26,8 @@ public class UserImpl {
      */
     public boolean addUser(User user) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("insert into users( user_first_name, user_last_name,"
-                + " user_contact, user_email, user_address,\n"
-                + "    user_reg_date, user_date_of_birth, user_height_cm, user_weight_kg, user_status,"
+        PreparedStatement ps = con.prepareStatement("insert into users( user_first_name, user_last_name,  "
+                + " user_contact, user_email, user_address,  user_reg_date, user_date_of_birth, user_height_cm, user_weight_kg, user_status, "
                 + " user_detail, user_password) values (?,?,?,?,?,?)");
         ps.setString(1, user.getFirstName());
         ps.setString(2, user.getLastName());
@@ -44,5 +44,9 @@ public class UserImpl {
          ps.executeUpdate();
         ps.close();
         return true;
+    }
+    
+     public ResultSet getAllUserItems() throws SQLException {
+        return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 }

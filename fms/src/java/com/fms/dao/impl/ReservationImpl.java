@@ -9,6 +9,7 @@ import com.fms.databaseconnecttion.DatabaseConnection;
 import com.fms.entity.Reservation;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -26,9 +27,10 @@ public class ReservationImpl {
     public boolean addReservation(Reservation reservation) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("insert into reservations(reservation_type,"
-                + " reservation_date, reservation_time,\n"
-                + "    reservation_user_id, reservation_user_name, reservation_status,"
-                + " reservation_detail) values (?,?,?,?,?,?,?)");
+                + " reservation_date, reservation_time, reservation_user_id, "
+                + " reservation_user_name, reservation_status, reservation_detail)"
+                + " values (?,?,?,?,?,?,?)");
+
         ps.setString(1, reservation.getReservType());
         ps.setTimestamp(2, reservation.getReservDate());
         ps.setTime(3, reservation.getReservTime());
@@ -39,5 +41,9 @@ public class ReservationImpl {
         ps.executeUpdate();
         ps.close();
         return true;
+    }
+
+    public ResultSet getAllReservationItems() throws SQLException {
+        return new CommonDaoImpl().getAllRecords(SelectQuery);
     }
 }

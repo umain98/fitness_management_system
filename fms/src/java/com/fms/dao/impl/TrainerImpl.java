@@ -9,6 +9,7 @@ import com.fms.databaseconnecttion.DatabaseConnection;
 import com.fms.entity.Trainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -17,7 +18,7 @@ import java.sql.SQLException;
  */
 public class TrainerImpl {
 
-    private String SelectQuery = "SELECT * FROM trainers";
+    private String selectQuery = "SELECT * FROM trainers";
 
     /*
     trainer_id, trainer_name, trainer_email, trainer_reg_date, trainer_contract_period_months, 
@@ -25,9 +26,9 @@ public class TrainerImpl {
      */
     public boolean addTrainer(Trainer trainer) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("insert into trainers(trainer_name, trainer_email,"
-                + " trainer_reg_date, trainer_contract_period_months, \n"
-                + "    trainer_address, trainer_contact, trainer_detail, trainer_status) values (?,?,?,?,?,?,?,?)");
+        PreparedStatement ps = con.prepareStatement("insert into trainers(trainer_name, "
+                + " trainer_email, trainer_reg_date, trainer_contract_period_months,  "
+                + " trainer_address, trainer_contact, trainer_detail, trainer_status) values (?,?,?,?,?,?,?,?)");
         ps.setString(1, trainer.getTrainerName());
         ps.setString(2, trainer.getTrainerEmail());
         ps.setTimestamp(3, trainer.getTrainerRegDate());
@@ -40,5 +41,8 @@ public class TrainerImpl {
         ps.close();
         return true;
 
+    }
+     public ResultSet getAllTrainerItems() throws SQLException {
+        return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 }

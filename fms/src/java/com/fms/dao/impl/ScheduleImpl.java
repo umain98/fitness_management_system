@@ -9,6 +9,7 @@ import com.fms.databaseconnecttion.DatabaseConnection;
 import com.fms.entity.Schedule;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -26,9 +27,9 @@ public class ScheduleImpl {
     public boolean addSchedule(Schedule schedule) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("insert into schedules(schedule_created_by_id, "
-                + "schedule_created_by_name, schedule_start_date,\n"
-                + "    schedule_end_date, schedule_days_per_week, schedule_for, schedule_special_note,"
-                + " schedule_status, schedule_detail) values (?,?,?,?,?,?,?,?,?)");
+                + "schedule_created_by_name, schedule_start_date, schedule_end_date, "
+                + "schedule_days_per_week, schedule_for, schedule_special_note, schedule_status, "
+                + "schedule_detail) values (?,?,?,?,?,?,?,?,?)");
         ps.setInt(1, schedule.getCreatedById());
         ps.setString(2, schedule.getCreatedByName());
         ps.setTimestamp(3, schedule.getStartDate());
@@ -41,5 +42,8 @@ public class ScheduleImpl {
         ps.executeUpdate();
         ps.close();
         return true;
+    }
+     public ResultSet getAllScheduleItems() throws SQLException {
+        return new CommonDaoImpl().getAllRecords(SelectQuery);
     }
 }

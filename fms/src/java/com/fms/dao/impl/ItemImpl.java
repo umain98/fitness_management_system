@@ -9,6 +9,7 @@ import com.fms.databaseconnecttion.DatabaseConnection;
 import com.fms.entity.Item;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -17,7 +18,7 @@ import java.sql.SQLException;
  */
 public class ItemImpl {
 
-    private String SelectQuery = "SELECT * FROM items";
+    private String selectQuery = "SELECT * FROM items";
 
     /*
     item_id, item_name, item_category, item_brand, item_price, item_status, item_detail
@@ -34,5 +35,9 @@ public class ItemImpl {
         ps.executeUpdate();
         ps.close();
         return true;
+    }
+    
+     public ResultSet getAllItemitems() throws SQLException {
+        return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 }
