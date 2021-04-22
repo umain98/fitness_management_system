@@ -37,4 +37,13 @@ public class GalleryImpl {
     public ResultSet getAllGalleryItems() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
+
+    public boolean deleteItemByGalleryId(int id) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("delete from items where gallery_id=?");
+        ps.setInt(1, id);
+        ps.executeUpdate();
+        ps.close();
+        return true;
+    }
 }

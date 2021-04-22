@@ -41,12 +41,21 @@ public class UserImpl {
         ps.setString(10, user.getStatus());
         ps.setString(11, user.getDetail());
         ps.setString(12, user.getPassword());
-         ps.executeUpdate();
+        ps.executeUpdate();
         ps.close();
         return true;
     }
-    
-     public ResultSet getAllUserItems() throws SQLException {
+
+    public ResultSet getAllUserItems() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
+    }
+
+    public boolean deleteItemByUserId(int id) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("delete from items where user_id=?");
+        ps.setInt(1, id);
+        ps.executeUpdate();
+        ps.close();
+        return true;
     }
 }

@@ -42,7 +42,17 @@ public class TrainerImpl {
         return true;
 
     }
-     public ResultSet getAllTrainerItems() throws SQLException {
+
+    public ResultSet getAllTrainerItems() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
+    }
+
+    public boolean deleteItemByTrainerId(int id) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("delete from items where trainer_id=?");
+        ps.setInt(1, id);
+        ps.executeUpdate();
+        ps.close();
+        return true;
     }
 }

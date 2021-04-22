@@ -46,4 +46,13 @@ public class ReservationImpl {
     public ResultSet getAllReservationItems() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
+    
+      public boolean deleteItemByReservationId(int id) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("delete from items where reservation_id=?");
+        ps.setInt(1, id);
+        ps.executeUpdate();
+        ps.close();
+        return true;
+    }
 }

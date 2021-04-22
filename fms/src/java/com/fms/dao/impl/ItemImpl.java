@@ -36,8 +36,18 @@ public class ItemImpl {
         ps.close();
         return true;
     }
-    
-     public ResultSet getAllItemitems() throws SQLException {
+
+    public ResultSet getAllItemitems() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
+
+    public boolean deleteItemByItemId(int id) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("delete from items where item_id=?");
+        ps.setInt(1, id);
+        ps.executeUpdate();
+        ps.close();
+        return true;
+    }
+
 }
