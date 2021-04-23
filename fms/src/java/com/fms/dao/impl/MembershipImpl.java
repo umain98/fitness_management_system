@@ -45,7 +45,7 @@ public class MembershipImpl {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 
-    public boolean deleteItemByMembershipPlanId(int id) throws SQLException {
+    public boolean deleteMembershipById(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("delete from memberships where membership_plan_id=?");
         ps.setInt(1, id);

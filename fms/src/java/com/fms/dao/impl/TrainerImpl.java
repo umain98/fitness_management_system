@@ -47,10 +47,28 @@ public class TrainerImpl {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 
-    public boolean deleteItemByTrainerId(int id) throws SQLException {
+    public boolean deleteTrainerById(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("delete from trainers where trainer_id=?");
         ps.setInt(1, id);
+        ps.executeUpdate();
+        ps.close();
+        return true;
+    }
+
+    public boolean updateTrainerById(Trainer trainer) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("update trainers set trainer_name=?,"
+                + " trainer_email=?, trainer_reg_date=?, trainer_contract_period_months=?, trainer_address=?,"
+                + " trainer_contact=?, trainer_detail=?, trainer_status=? where trainer_id=? ");
+        ps.setString(1, trainer.getTrainerName());
+        ps.setString(2, trainer.getTrainerEmail());
+        ps.setTimestamp(3, trainer.getTrainerRegDate());
+        ps.setInt(4, trainer.getContractPeriodMonths());
+        ps.setString(5, trainer.getTrainerAddress());
+        ps.setString(6, trainer.getTrainerContact());
+        ps.setString(7, trainer.getDetail());
+        ps.setString(8, trainer.getStatus());
         ps.executeUpdate();
         ps.close();
         return true;

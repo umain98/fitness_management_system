@@ -38,10 +38,22 @@ public class GalleryImpl {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 
-    public boolean deleteItemByGalleryId(int id) throws SQLException {
+    public boolean deleteGalleryById(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("delete from gallery where gallery_id=?");
         ps.setInt(1, id);
+        ps.executeUpdate();
+        ps.close();
+        return true;
+    }
+
+    public boolean updateGalleryById(Gallery gallery) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("update gallery set gallery_section=?, gallery_path=?, gallery_name=? where gallery_id=?");
+        ps.setString(1, gallery.getGallerySection());
+        ps.setString(2, gallery.getGalleryPath());
+        ps.setString(3, gallery.getGalleryName());
+        ps.setInt(4, gallery.getGalleryId());
         ps.executeUpdate();
         ps.close();
         return true;

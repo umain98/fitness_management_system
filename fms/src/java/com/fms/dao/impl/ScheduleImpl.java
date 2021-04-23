@@ -43,14 +43,35 @@ public class ScheduleImpl {
         ps.close();
         return true;
     }
-     public ResultSet getAllScheduleItems() throws SQLException {
+
+    public ResultSet getAllScheduleItems() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
-     
-       public boolean deleteItemByScheduleId(int id) throws SQLException {
+
+    public boolean deleteScheduleById(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("delete from schedules where schedule_id=?");
         ps.setInt(1, id);
+        ps.executeUpdate();
+        ps.close();
+        return true;
+    }
+
+    public boolean updateScheduleById(Schedule schedule) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("update schedules set schedule_created_by_id=?,"
+                + " schedule_created_by_name=?, schedule_start_date=?,schedule_end_date=?, schedule_days_per_week=?, "
+                + "schedule_for=?, schedule_special_note=?, schedule_status=?, schedule_detail=? where schedule_id=? ");
+        ps.setInt(1, schedule.getCreatedById());
+        ps.setString(2, schedule.getCreatedByName());
+        ps.setTimestamp(3, schedule.getStartDate());
+        ps.setTimestamp(4, schedule.getEndDate());
+        ps.setInt(5, schedule.getDaysPerWeek());
+        ps.setString(6, schedule.getScheduleFor());
+        ps.setString(7, schedule.getSpecialNote());
+        ps.setString(8, schedule.getStatus());
+        ps.setString(9, schedule.getDetail());
+        ps.setInt(10, schedule.getScheduleId());
         ps.executeUpdate();
         ps.close();
         return true;

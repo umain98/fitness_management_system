@@ -46,10 +46,28 @@ public class ReservationImpl {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 
-    public boolean deleteItemByReservationId(int id) throws SQLException {
+    public boolean deleteReservationById(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("delete from reservations where reservation_id=?");
         ps.setInt(1, id);
+        ps.executeUpdate();
+        ps.close();
+        return true;
+    }
+
+    public boolean updateReservationById(Reservation reservation) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("update reservations set reservation_type=?, "
+                + "reservation_date=?, reservation_time=?, reservation_user_id=?, reservation_user_name=?,"
+                + " reservation_status=?, reservation_detail=? where reservation_id=? ");
+        ps.setString(1, reservation.getReservType());
+        ps.setTimestamp(2, reservation.getReservDate());
+        ps.setTime(3, reservation.getReservTime());
+        ps.setInt(4, reservation.getReservUserId());
+        ps.setString(5, reservation.getReservUserName());
+        ps.setString(6, reservation.getStatus());
+        ps.setString(7, reservation.getDetail());
+        ps.setInt(8, reservation.getReservId());
         ps.executeUpdate();
         ps.close();
         return true;

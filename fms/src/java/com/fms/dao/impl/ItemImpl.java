@@ -41,7 +41,7 @@ public class ItemImpl {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 
-    public boolean deleteItemByItemId(int id) throws SQLException {
+    public boolean deleteItemById(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("delete from items where item_id=?");
         ps.setInt(1, id);
@@ -50,4 +50,20 @@ public class ItemImpl {
         return true;
     }
 
+    public boolean updateItemById(Item item) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("update items set item_name=?, "
+                + "item_category=?, item_brand=?, item_price=?, item_status=?, item_detail=? "
+                + "where item_id=? ");
+        ps.setString(1, item.getItemName());
+        ps.setString(2, item.getItemCategory());
+        ps.setString(3, item.getItemBrand());
+        ps.setBigDecimal(4, item.getItemPrice());
+        ps.setString(5, item.getStatus());
+        ps.setString(6, item.getDetail());
+        ps.setInt(7, item.getItemId());
+        ps.executeUpdate();
+        ps.close();
+        return true;
+    }
 }
