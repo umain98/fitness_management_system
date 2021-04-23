@@ -49,7 +49,7 @@ public class ScheduleImpl {
      
        public boolean deleteItemByScheduleId(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("delete from items where schedule_id=?");
+        PreparedStatement ps = con.prepareStatement("delete from schedules where schedule_id=?");
         ps.setInt(1, id);
         ps.executeUpdate();
         ps.close();

@@ -15,12 +15,12 @@ import java.sql.SQLException;
  *
  * @author USER
  */
-public class CommonDaoImpl {
+public class CommonDaoImpl { 
 
     public ResultSet getAllRecords(String selectQuery) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement(selectQuery);
         return ps.executeQuery();
     }
-
+    
 }

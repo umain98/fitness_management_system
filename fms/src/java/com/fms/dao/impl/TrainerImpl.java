@@ -49,7 +49,7 @@ public class TrainerImpl {
 
     public boolean deleteItemByTrainerId(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("delete from items where trainer_id=?");
+        PreparedStatement ps = con.prepareStatement("delete from trainers where trainer_id=?");
         ps.setInt(1, id);
         ps.executeUpdate();
         ps.close();

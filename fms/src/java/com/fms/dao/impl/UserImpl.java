@@ -52,7 +52,7 @@ public class UserImpl {
 
     public boolean deleteItemByUserId(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("delete from items where user_id=?");
+        PreparedStatement ps = con.prepareStatement("delete from users where user_id=?");
         ps.setInt(1, id);
         ps.executeUpdate();
         ps.close();

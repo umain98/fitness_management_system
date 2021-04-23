@@ -23,7 +23,6 @@ public class ReservationImpl {
     /*
     reservation_id, reservation_type, reservation_date, reservation_time,
     reservation_user_id, reservation_user_name, reservation_status, reservation_detail*/
-    
     public boolean addReservation(Reservation reservation) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("insert into reservations(reservation_type,"
@@ -46,10 +45,10 @@ public class ReservationImpl {
     public ResultSet getAllReservationItems() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
-    
-      public boolean deleteItemByReservationId(int id) throws SQLException {
+
+    public boolean deleteItemByReservationId(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("delete from items where reservation_id=?");
+        PreparedStatement ps = con.prepareStatement("delete from reservations where reservation_id=?");
         ps.setInt(1, id);
         ps.executeUpdate();
         ps.close();
