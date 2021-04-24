@@ -58,7 +58,7 @@ public class ReservationImpl {
     public boolean updateReservationById(Reservation reservation) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("update reservations set reservation_type=?, "
-                + "reservation_date=?, reservation_time=?, reservation_user_id=?, reservation_user_name=?,"
+                + " reservation_date=?, reservation_time=?, reservation_user_id=?, reservation_user_name=?,"
                 + " reservation_status=?, reservation_detail=? where reservation_id=? ");
         ps.setString(1, reservation.getReservType());
         ps.setTimestamp(2, reservation.getReservDate());
