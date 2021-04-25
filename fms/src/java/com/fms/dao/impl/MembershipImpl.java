@@ -20,6 +20,10 @@ public class MembershipImpl {
 
     private String selectQuery = "SELECT * FROM memberships";
 
+    public MembershipImpl() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /*
     membership_plan_id, membership_plan_name, membership_plan_valid_period_month,
     membership_plan_personal_trainer, membership_plan_visit_count_month, membership_plan_price, 

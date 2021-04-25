@@ -20,7 +20,9 @@ public class MembershipController {
     membership_plan_name, membership_plan_valid_period_month,
     membership_plan_personal_trainer, membership_plan_visit_count_month, membership_plan_price, 
     membership_plan_detail, membership_plan_status*/
-    public static boolean addMembership(String planName, int validPeriodMonths, int personalTrainer, int visitCountMonth, BigDecimal planPrice, String planDetail, String planStatus) throws SQLException {
+    
+    public static boolean addMembership(String planName, int validPeriodMonths, int personalTrainer, 
+            int visitCountMonth, BigDecimal planPrice, String planDetail, String planStatus) throws SQLException {
         Membership membership = new Membership();
         membership.setPlanName(planName);
         membership.setValidPeriodMonths(validPeriodMonths);
@@ -31,4 +33,20 @@ public class MembershipController {
         membership.setStatus(planStatus);
         return new MembershipImpl().addMembership(membership);
     }
+    
+    public static boolean updateMembership(int planId, String planName, int validPeriodMonths, int personalTrainer, 
+            int visitCountMonth, BigDecimal planPrice, String planDetail, String planStatus) throws SQLException{
+        Membership membership = new Membership();
+        membership.setPlanId(planId);
+        membership.setPlanName(planName);
+        membership.setValidPeriodMonths(validPeriodMonths);
+        membership.setPersonalTrainer(personalTrainer);
+        membership.setVisitCountMonth(visitCountMonth);
+        membership.setPlanPrice(planPrice);
+        membership.setDetail(planDetail);
+        membership.setStatus(planStatus);
+        return new MembershipImpl().updateMembershipById(membership);
+    }
+    
+   
 }

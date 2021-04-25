@@ -14,12 +14,11 @@ import java.sql.SQLException;
  * @author USER
  */
 public class GalleryController {
-    
-     /*
+
+    /*
      gallery_section, gallery_path, gallery_name
      */
-    
-    public static boolean addGallery( String gallerySection,String galleryPath,String galleryName) throws SQLException {
+    public static boolean addGallery(String gallerySection, String galleryPath, String galleryName) throws SQLException {
         Gallery gallery = new Gallery();
         gallery.setGallerySection(gallerySection);
         gallery.setGalleryPath(galleryPath);
