@@ -121,4 +121,8 @@ public class Item {
         this.status = status;
     }
 
+    public void getItemBrand(String itemBrand) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
