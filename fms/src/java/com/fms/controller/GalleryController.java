@@ -25,4 +25,13 @@ public class GalleryController {
         gallery.setGallerySection(gallerySection);
         return new GalleryImpl().addGallery(gallery);
     }
+
+    public static boolean updateGallery(int galleryId, String gallerySection, String galleryPath, String galleryName) throws SQLException {
+        Gallery gallery = new Gallery();
+        gallery.setGalleryId(galleryId);
+        gallery.setGallerySection(gallerySection);
+        gallery.setGalleryPath(galleryPath);
+        gallery.setGallerySection(gallerySection);
+        return new GalleryImpl().updateGalleryById(gallery);
+    }
 }

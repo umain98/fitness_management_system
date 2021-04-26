@@ -40,4 +40,25 @@ public class UserController {
         user.setPassword(password);
         return new UserImpl().addUser(user);
     }
+    
+    public static boolean updateUser(int userId, String firstName, String lastName, String contact, String email, String address,
+            Timestamp registerDate, Date dateOfBirth, BigDecimal heightCm, BigDecimal weightKg, String status, String detail,
+            String password) throws SQLException{
+        User user = new User();
+        user.setUserId(userId);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setContact(contact);
+        user.setEmail(email);
+        user.setAddress(address);
+        user.setUserRegDate(registerDate);
+        user.setDateOfBirth(dateOfBirth);
+        user.setHeightCm(heightCm);
+        user.setWeightKg(weightKg);
+        user.setStatus(status);
+        user.setDetail(detail);
+        user.setPassword(password);
+        return new UserImpl().updateUserById(user);
+        
+    }
 }

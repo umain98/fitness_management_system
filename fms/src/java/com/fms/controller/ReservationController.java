@@ -16,14 +16,13 @@ import java.sql.Timestamp;
  * @author USER
  */
 public class ReservationController {
-    
-     /*
+
+    /*
     reservation_type, reservation_date, reservation_time,
     reservation_user_id, reservation_user_name, reservation_status, reservation_detail
-    */
-    
+     */
     public static boolean addReservation(String reservType, Timestamp reservDate, Time reservTime,
-            int reservUserId, String reservUserName, String status, String detail) throws SQLException{
+            int reservUserId, String reservUserName, String status, String detail) throws SQLException {
         Reservation reservation = new Reservation();
         reservation.setReservType(reservType);
         reservation.setReservDate(reservDate);
@@ -33,5 +32,19 @@ public class ReservationController {
         reservation.setStatus(status);
         reservation.setDetail(detail);
         return new ReservationImpl().addReservation(reservation);
+    }
+
+    public static boolean updateReservation(int reservId, String reservType, Timestamp reservDate, Time reservTime,
+            int reservUserId, String reservUserName, String status, String detail) throws SQLException {
+        Reservation reservation = new Reservation();
+        reservation.setReservId(reservId);
+        reservation.setReservType(reservType);
+        reservation.setReservDate(reservDate);
+        reservation.setReservTime(reservTime);
+        reservation.setReservUserId(reservUserId);
+        reservation.setReservUserName(reservUserName);
+        reservation.setStatus(status);
+        reservation.setDetail(detail);
+        return new ReservationImpl().updateReservationById(reservation);
     }
 }

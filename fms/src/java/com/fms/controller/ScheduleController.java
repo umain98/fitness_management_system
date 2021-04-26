@@ -15,14 +15,14 @@ import java.sql.Timestamp;
  * @author USER
  */
 public class ScheduleController {
-    
-     /*
+
+    /*
     schedule_created_by_id, schedule_created_by_name, schedule_start_date,
     schedule_end_date, schedule_days_per_week, schedule_for, schedule_special_note, schedule_status, schedule_detail
      */
     
     public static boolean addSchedule(int createdById, String createdByName, Timestamp startDate,
-            Timestamp endDate, int daysPerWeek, String scheduleFor, String specialNote, String status, String detail) throws SQLException{
+            Timestamp endDate, int daysPerWeek, String scheduleFor, String specialNote, String status, String detail) throws SQLException {
         Schedule schedule = new Schedule();
         schedule.setCreatedById(createdById);
         schedule.setCreatedByName(createdByName);
@@ -34,5 +34,22 @@ public class ScheduleController {
         schedule.setStatus(status);
         schedule.setDetail(detail);
         return new ScheduleImpl().addSchedule(schedule);
+    }
+
+    public static boolean updateSchedule(int scheduleId, int createdById, String createdByName, Timestamp startDate,
+            Timestamp endDate, int daysPerWeek, String scheduleFor, String specialNote, String status, String detail) throws SQLException {
+        Schedule schedule = new Schedule();
+        schedule.setScheduleId(scheduleId);
+        schedule.setCreatedById(createdById);
+        schedule.setCreatedByName(createdByName);
+        schedule.setStartDate(startDate);
+        schedule.setEndDate(endDate);
+        schedule.setDaysPerWeek(daysPerWeek);
+        schedule.setScheduleFor(scheduleFor);
+        schedule.setSpecialNote(specialNote);
+        schedule.setStatus(status);
+        schedule.setDetail(detail);
+        return new ScheduleImpl().updateScheduleById(schedule);
+
     }
 }

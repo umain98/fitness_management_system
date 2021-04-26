@@ -22,15 +22,31 @@ public class TrainerController {
      */
     public static boolean addTrainer(String trainerName, String trainerEmail, Timestamp trainerRegDate,
             int contractPeriodMonths, String trainerAddress, String trainerContact, String detail, String status) throws SQLException {
-      Trainer trainer = new Trainer();
-      trainer.setTrainerName(trainerName);
-      trainer.setTrainerEmail(trainerEmail);
-      trainer.setTrainerRegDate(trainerRegDate);
-      trainer.setContractPeriodMonths(contractPeriodMonths);
-      trainer.setTrainerAddress(trainerAddress);
-      trainer.setTrainerContact(trainerContact);
-      trainer.setDetail(detail);
-      trainer.setStatus(status);
-      return new TrainerImpl().addTrainer(trainer);
+        Trainer trainer = new Trainer();
+        trainer.setTrainerName(trainerName);
+        trainer.setTrainerEmail(trainerEmail);
+        trainer.setTrainerRegDate(trainerRegDate);
+        trainer.setContractPeriodMonths(contractPeriodMonths);
+        trainer.setTrainerAddress(trainerAddress);
+        trainer.setTrainerContact(trainerContact);
+        trainer.setDetail(detail);
+        trainer.setStatus(status);
+        return new TrainerImpl().addTrainer(trainer);
+    }
+
+    public static boolean updateTrainer(int trainerId, String trainerName, String trainerEmail, Timestamp trainerRegDate,
+            int contractPeriodMonths, String trainerAddress, String trainerContact, String detail, String status) throws SQLException {
+        Trainer trainer = new Trainer();
+        trainer.setTrainerId(trainerId);
+        trainer.setTrainerName(trainerName);
+        trainer.setTrainerEmail(trainerEmail);
+        trainer.setTrainerRegDate(trainerRegDate);
+        trainer.setContractPeriodMonths(contractPeriodMonths);
+        trainer.setTrainerAddress(trainerAddress);
+        trainer.setTrainerContact(trainerContact);
+        trainer.setDetail(detail);
+        trainer.setStatus(status);
+        return new TrainerImpl().updateTrainerById(trainer);
+
     }
 }

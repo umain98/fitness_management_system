@@ -31,5 +31,18 @@ public class ItemController {
         return new ItemImpl().addItem(item);
 
     }
-       
+
+    public static boolean updateItem(int itemId, String itemName, String itemCategory, String itemBrand,
+            BigDecimal itemPrice, String itemStatus, String itemDetail) throws SQLException {
+        Item item = new Item();
+        item.setItemId(itemId);
+        item.setItemName(itemName);
+        item.setItemCategory(itemCategory);
+        item.getItemBrand(itemBrand);
+        item.setItemPrice(itemPrice);
+        item.setStatus(itemStatus);
+        item.setDetail(itemDetail);
+        return new ItemImpl().updateItemById(item);
+    }
+
 }
