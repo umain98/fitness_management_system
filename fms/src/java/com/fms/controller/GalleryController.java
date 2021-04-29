@@ -7,6 +7,7 @@ package com.fms.controller;
 
 import com.fms.dao.impl.GalleryImpl;
 import com.fms.entity.Gallery;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -33,5 +34,13 @@ public class GalleryController {
         gallery.setGalleryPath(galleryPath);
         gallery.setGallerySection(gallerySection);
         return new GalleryImpl().updateGalleryById(gallery);
+    }
+    
+    public static boolean deleteGalleryById(int galleryId) throws SQLException{
+        return new GalleryImpl().deleteGalleryById(galleryId);
+    }
+    
+    public static ResultSet getAllGalleryRecords() throws SQLException{
+        return new GalleryImpl().getAllGalleryItems();
     }
 }

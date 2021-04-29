@@ -7,6 +7,7 @@ package com.fms.controller;
 
 import com.fms.dao.impl.ScheduleImpl;
 import com.fms.entity.Schedule;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
@@ -20,7 +21,6 @@ public class ScheduleController {
     schedule_created_by_id, schedule_created_by_name, schedule_start_date,
     schedule_end_date, schedule_days_per_week, schedule_for, schedule_special_note, schedule_status, schedule_detail
      */
-    
     public static boolean addSchedule(int createdById, String createdByName, Timestamp startDate,
             Timestamp endDate, int daysPerWeek, String scheduleFor, String specialNote, String status, String detail) throws SQLException {
         Schedule schedule = new Schedule();
@@ -51,5 +51,13 @@ public class ScheduleController {
         schedule.setDetail(detail);
         return new ScheduleImpl().updateScheduleById(schedule);
 
+    }
+
+    public static boolean deleteScheduleById(int scheduleId) throws SQLException {
+        return new ScheduleImpl().deleteScheduleById(scheduleId);
+    }
+
+    public static ResultSet gettAllScheduleRecords() throws SQLException {
+        return new ScheduleImpl().getAllScheduleItems();
     }
 }

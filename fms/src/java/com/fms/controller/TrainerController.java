@@ -7,6 +7,7 @@ package com.fms.controller;
 
 import com.fms.dao.impl.TrainerImpl;
 import com.fms.entity.Trainer;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
@@ -48,5 +49,13 @@ public class TrainerController {
         trainer.setStatus(status);
         return new TrainerImpl().updateTrainerById(trainer);
 
+    }
+
+    public static boolean deleteTrainerById(int trainerId) throws SQLException {
+        return new TrainerImpl().deleteTrainerById(trainerId);
+    }
+
+    public static ResultSet getAllTrainerRecords() throws SQLException {
+        return new TrainerImpl().getAllTrainerItems();
     }
 }

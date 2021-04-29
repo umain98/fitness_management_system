@@ -8,6 +8,7 @@ package com.fms.controller;
 import com.fms.dao.impl.ItemImpl;
 import com.fms.entity.Item;
 import java.math.BigDecimal;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -45,4 +46,13 @@ public class ItemController {
         return new ItemImpl().updateItemById(item);
     }
 
+    public static boolean deleteItemById(int itemId) throws SQLException {
+        return new ItemImpl().deleteItemById(itemId);
+    }
+    
+    public static ResultSet getAllItemRecords() throws SQLException{
+        return new ItemImpl().getAllItemitems();
+    }
 }
+ 
+   

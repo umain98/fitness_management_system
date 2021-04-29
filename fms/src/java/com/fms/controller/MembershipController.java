@@ -8,6 +8,7 @@ package com.fms.controller;
 import com.fms.dao.impl.MembershipImpl;
 import com.fms.entity.Membership;
 import java.math.BigDecimal;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -20,8 +21,7 @@ public class MembershipController {
     membership_plan_name, membership_plan_valid_period_month,
     membership_plan_personal_trainer, membership_plan_visit_count_month, membership_plan_price, 
     membership_plan_detail, membership_plan_status*/
-    
-    public static boolean addMembership(String planName, int validPeriodMonths, int personalTrainer, 
+    public static boolean addMembership(String planName, int validPeriodMonths, int personalTrainer,
             int visitCountMonth, BigDecimal planPrice, String planDetail, String planStatus) throws SQLException {
         Membership membership = new Membership();
         membership.setPlanName(planName);
@@ -33,9 +33,9 @@ public class MembershipController {
         membership.setStatus(planStatus);
         return new MembershipImpl().addMembership(membership);
     }
-    
-    public static boolean updateMembership(int planId, String planName, int validPeriodMonths, int personalTrainer, 
-            int visitCountMonth, BigDecimal planPrice, String planDetail, String planStatus) throws SQLException{
+
+    public static boolean updateMembership(int planId, String planName, int validPeriodMonths, int personalTrainer,
+            int visitCountMonth, BigDecimal planPrice, String planDetail, String planStatus) throws SQLException {
         Membership membership = new Membership();
         membership.setPlanId(planId);
         membership.setPlanName(planName);
@@ -47,6 +47,12 @@ public class MembershipController {
         membership.setStatus(planStatus);
         return new MembershipImpl().updateMembershipById(membership);
     }
-    
-   
+
+    public static boolean deleteMembershipById(int planId) throws SQLException {
+        return new MembershipImpl().deleteMembershipById(planId);
+    }
+
+    public static ResultSet getAllMembershipRecords() throws SQLException {
+        return new MembershipImpl().getAllMembershipItems();
+    }
 }

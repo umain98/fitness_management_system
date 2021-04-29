@@ -7,6 +7,7 @@ package com.fms.controller;
 
 import com.fms.dao.impl.ReservationImpl;
 import com.fms.entity.Reservation;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
 import java.sql.Timestamp;
@@ -46,5 +47,13 @@ public class ReservationController {
         reservation.setStatus(status);
         reservation.setDetail(detail);
         return new ReservationImpl().updateReservationById(reservation);
+    }
+
+    public static boolean deleteReservationById(int reservId) throws SQLException {
+        return new ReservationImpl().deleteReservationById(reservId);
+    }
+
+    public static ResultSet getAllReservationRecords() throws SQLException {
+        return new ReservationImpl().getAllReservationItems();
     }
 }

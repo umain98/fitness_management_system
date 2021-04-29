@@ -9,6 +9,7 @@ import com.fms.dao.impl.UserImpl;
 import com.fms.entity.User;
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
@@ -40,10 +41,10 @@ public class UserController {
         user.setPassword(password);
         return new UserImpl().addUser(user);
     }
-    
+
     public static boolean updateUser(int userId, String firstName, String lastName, String contact, String email, String address,
             Timestamp registerDate, Date dateOfBirth, BigDecimal heightCm, BigDecimal weightKg, String status, String detail,
-            String password) throws SQLException{
+            String password) throws SQLException {
         User user = new User();
         user.setUserId(userId);
         user.setFirstName(firstName);
@@ -59,6 +60,14 @@ public class UserController {
         user.setDetail(detail);
         user.setPassword(password);
         return new UserImpl().updateUserById(user);
-        
+
+    }
+
+    public static boolean deleteUserById(int userId) throws SQLException {
+        return new UserImpl().deleteUserById(userId);
+    }
+
+    public static ResultSet getAllUserRecords() throws SQLException {
+        return new UserImpl().getAllUserItems();
     }
 }
