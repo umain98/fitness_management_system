@@ -56,6 +56,6 @@ public class TrainerController {
     }
 
     public static ResultSet getAllTrainerRecords() throws SQLException {
-        return new TrainerImpl().getAllTrainerItems();
+        return new TrainerImpl().getAllTrainerRecords();
     }
 }

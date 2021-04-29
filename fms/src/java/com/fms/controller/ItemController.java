@@ -51,7 +51,7 @@ public class ItemController {
     }
     
     public static ResultSet getAllItemRecords() throws SQLException{
-        return new ItemImpl().getAllItemitems();
+        return new ItemImpl().getAllItems();
     }
 }
  

@@ -53,6 +53,6 @@ public class MembershipController {
     }
 
     public static ResultSet getAllMembershipRecords() throws SQLException {
-        return new MembershipImpl().getAllMembershipItems();
+        return new MembershipImpl().getAllMembershipRecords();
     }
 }

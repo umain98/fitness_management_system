@@ -44,7 +44,7 @@ public class ScheduleImpl {
         return true;
     }
 
-    public ResultSet getAllScheduleItems() throws SQLException {
+    public ResultSet getAllScheduleRecords() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 

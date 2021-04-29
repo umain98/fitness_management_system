@@ -46,7 +46,7 @@ public class UserImpl {
         return true;
     }
 
-    public ResultSet getAllUserItems() throws SQLException {
+    public ResultSet getAllUserRecords() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 

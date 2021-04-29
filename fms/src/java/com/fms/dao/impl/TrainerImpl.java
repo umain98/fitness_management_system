@@ -43,7 +43,7 @@ public class TrainerImpl {
 
     }
 
-    public ResultSet getAllTrainerItems() throws SQLException {
+    public ResultSet getAllTrainerRecords() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 

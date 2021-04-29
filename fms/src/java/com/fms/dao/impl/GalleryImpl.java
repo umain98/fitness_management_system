@@ -34,7 +34,7 @@ public class GalleryImpl {
         return true;
     }
 
-    public ResultSet getAllGalleryItems() throws SQLException {
+    public ResultSet getAllGalleryRecords() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 

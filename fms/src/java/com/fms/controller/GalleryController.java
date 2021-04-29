@@ -41,6 +41,6 @@ public class GalleryController {
     }
     
     public static ResultSet getAllGalleryRecords() throws SQLException{
-        return new GalleryImpl().getAllGalleryItems();
+        return new GalleryImpl().getAllGalleryRecords();
     }
 }

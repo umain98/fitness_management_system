@@ -58,6 +58,6 @@ public class ScheduleController {
     }
 
     public static ResultSet gettAllScheduleRecords() throws SQLException {
-        return new ScheduleImpl().getAllScheduleItems();
+        return new ScheduleImpl().getAllScheduleRecords();
     }
 }

@@ -42,7 +42,7 @@ public class ReservationImpl {
         return true;
     }
 
-    public ResultSet getAllReservationItems() throws SQLException {
+    public ResultSet getAllReservationRecords() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 

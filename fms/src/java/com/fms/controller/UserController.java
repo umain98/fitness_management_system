@@ -68,6 +68,6 @@ public class UserController {
     }
 
     public static ResultSet getAllUserRecords() throws SQLException {
-        return new UserImpl().getAllUserItems();
+        return new UserImpl().getAllUserRecords();
     }
 }

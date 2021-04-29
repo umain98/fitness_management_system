@@ -54,6 +54,6 @@ public class ReservationController {
     }
 
     public static ResultSet getAllReservationRecords() throws SQLException {
-        return new ReservationImpl().getAllReservationItems();
+        return new ReservationImpl().getAllReservationRecords();
     }
 }

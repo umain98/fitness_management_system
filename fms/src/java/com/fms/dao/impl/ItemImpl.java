@@ -37,7 +37,7 @@ public class ItemImpl {
         return true;
     }
 
-    public ResultSet getAllItemitems() throws SQLException {
+    public ResultSet getAllItems() throws SQLException {
         return new CommonDaoImpl().getAllRecords(selectQuery);
     }
 
