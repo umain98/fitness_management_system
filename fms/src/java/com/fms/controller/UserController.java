@@ -19,10 +19,7 @@ import java.sql.Timestamp;
  */
 public class UserController {
 
-    /*
-    user_first_name, user_last_name, user_contact, user_email, user_address,
-    user_reg_date, user_date_of_birth, user_height_cm, user_weight_kg, user_status, user_detail, user_password
-     */
+
     public static boolean addUser(String firstName, String lastName, String contact, String email, String address,
             Timestamp registerDate, Date dateOfBirth, BigDecimal heightCm, BigDecimal weightKg, String status, String detail,
             String password) throws SQLException {
