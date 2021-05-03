@@ -19,7 +19,7 @@
         }
 
         input[type=submit] {
-            width: 400px;
+            width: 200px;
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;

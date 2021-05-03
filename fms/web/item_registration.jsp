@@ -9,7 +9,7 @@
 <html>
     <style>
         input[type=text], select {
-            width: 400px;
+            width: 500px;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -19,7 +19,7 @@
         }
 
         input[type=submit] {
-            width: 400px;
+            width: 200px;
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
@@ -43,27 +43,22 @@
 
         <h3>Item Registration</h3>
 
-        <div>
+        <div style="left: 30%; top: 10%; width: 40%; position: absolute;">
             <form action="/action_page.php">
-                <label for="iname">Item Name</label>
-                <input type="text" id="iname" name="itemname" placeholder="Item name">
-                <br>
-                <label for="icategory">Item Category</label>
-                <input type="text" id="gpath" name="itemcategory" placeholder="Item category ">
-                <br>
-                <label for="ibrand">Item Brand</label>
-                <input type="text" id="icategory" name="itembrand" placeholder="Item brand">
-                <br>
-                <label for="iprice">Item Price</label>
-                <input type="currency" id="iprice" name="itemprice" placeholder="Item price">
-                <br>
-                <label for="idetail">Item Detail</label>
-                <input type="text" id="idetail" name="itemdetail" placeholder="Item detail">
-                <br>
-                <br> 
+                <div style="left: 5%; width: 250px; height: 50px; top: 20px; position: relative;"> <label for="iname">Item Name</label> </div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;"> <input type="text" id="iname" name="itemname" placeholder="Item name"></div>
+                <div style="left:5%; width: 250px; height: 50px; top: -30px; position: relative;" > <label for="icategory">Item Category</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -70px; position: relative;"><input type="text" id="gpath" name="itemcategory" placeholder="Item category "></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -60px; position: relative;">  <label for="ibrand">Item Brand</label> </div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -100px; position: relative;"> <input type="text" id="icategory" name="itembrand" placeholder="Item brand"></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -90px; position: relative;"><label for="iprice">Item Price</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -130px; position: relative;"> <input type="text" id="iprice" name="itemprice" placeholder="Item price"></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -120px; position: relative;">  <label for="idetail">Item Detail</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -160px; position: relative;">  <input type="text" id="idetail" name="itemdetail" placeholder="Item detail"></div>
 
 
-                <input type="submit" value="Submit">
+
+                <div style="left: 50%; width: 250px; height: 50px; top: -90px; position: relative;">  <input type="submit" value="Submit"></div>
             </form>
         </div>
 

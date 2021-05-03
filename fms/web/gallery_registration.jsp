@@ -9,7 +9,7 @@
 <html>
     <style>
         input[type=text], select {
-            width: 400px;
+            width: 500px;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -19,7 +19,7 @@
         }
 
         input[type=submit] {
-            width: 400px;
+            width: 200px;
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
@@ -35,7 +35,7 @@
 
         div {
             border-radius: 5px;
-            background-color: #f2f2f2;
+            background-color:#EAECEE;
             padding: 20px;
         }
     </style>
@@ -43,21 +43,20 @@
 
         <h3>Gallery Registration</h3>
 
-        <div>
+        <div style="left: 30%; top: 10%; width: 40%; bottom: 10%; position: absolute;">
             <form action="/action_page.php">
-                <label for="gsection">Gallery Section</label>
-                <input type="text" id="gsection" name="gallerysection" placeholder="Gallery section">
-                <br>
-                <label for="gpath">Gallery Path</label>
-                <input type="text" id="gpath" name="gallerypath" placeholder="Gallery path">
-                <br>
-                <label for="gname">Gallery Name</label>
-                <input type="text" id="gname" name="galleryname" placeholder="Gallery name">
-                <br>
-                <br> 
+                <div style="left: 5%; width: 250px; height: 50px; top: 20px; position: relative;"> <label for="gsection">Gallery Section</label> </div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;"><input type="text" id="gsection" name="gallerysection" placeholder="Gallery section"></div>
+                <div style="left:5%; width: 250px; height: 50px; top: -30px; position: relative;" ><label for="gpath">Gallery Path</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -70px; position: relative;"><input type="text" id="gpath" name="gallerypath" placeholder="Gallery path"></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -60px; position: relative;"><label for="gname">Gallery Name</label> </div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -100px; position: relative;"><input type="text" id="gname" name="galleryname" placeholder="Gallery name"></div>
 
 
-                <input type="submit" value="Submit">
+                <div style="left: 50%; width: 250px; height: 50px; top: -60px; position: relative;">  <input type="submit" value="Submit"></div>
+
+
+
             </form>
         </div>
 

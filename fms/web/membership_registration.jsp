@@ -9,7 +9,7 @@
 <html>
     <style>
         input[type=text], select {
-            width: 400px;
+            width: 500px;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -19,7 +19,7 @@
         }
 
         input[type=submit] {
-            width: 400px;
+            width: 200px;
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
@@ -43,30 +43,24 @@
 
         <h3>Membership Registration</h3>
 
-        <div>
+        <div style="left: 30%; top: 10%; width: 40%; position: absolute;">
             <form action="/action_page.php">
-                <label for="pname">Plan Name</label>
-                <input type="text" id="pname" name="planname" placeholder="Plan name">
-                <br>
-                <label for="validperiodmonths">Valid Period Months</label>
-                <input type="number" id="validperiodmonths" name="validperiodmonths" placeholder="Valid period months">
-                <br>
-                <label for="personaltrainer">Personal Trainer</label>
-                <input type="text" id="personaltrainer" name="personaltrainer" placeholder="Personal trainer">
-                <br>
-                <label for="visitcountmonths">Visit Count Months</label>
-                <input type="number" id="visitcountmonths" name="visitcountmonths" placeholder="Visit count months">
-                <br>
-                <label for="pprice">Plan Price</label>
-                <input type="text" id="pprice" name="planprice" placeholder="Plan price">
-                <br>
-                <label for="pdetail">Plan Detail</label>
-                <input type="text" id="pdetail" name="plandetail" placeholder="Plan detail">
-                <br>
-                <br> 
+                <div style="left: 5%; width: 250px; height: 50px; top: 20px; position: relative;"><label for="pname">Plan Name</label> </div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;"><input type="text" id="pname" name="planname" placeholder="Plan name"></div>
+                <div style="left:5%; width: 250px; height: 50px; top: -30px; position: relative;" ><label for="validperiodmonths">Valid Period Months</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -60px; position: relative;"><input type="number" id="validperiodmonths" name="validperiodmonths" placeholder="Valid period months"></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -90px; position: relative;"><label for="personaltrainer">Personal Trainer</label> </div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -130px; position: relative;"><input type="text" id="personaltrainer" name="personaltrainer" placeholder="Personal trainer"></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -130px; position: relative;"><label for="visitcountmonths">Visit Count Months</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -160px; position: relative;"><input type="number" id="visitcountmonths" name="visitcountmonths" placeholder="Visit count months"></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -170px; position: relative;"><label for="pprice">Plan Price</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -220px; position: relative;"><input type="text" id="pprice" name="planprice" placeholder="Plan price"></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -200px; position: relative;"> <label for="pdetail">Plan Detail</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -250px; position: relative;"><input type="text" id="pdetail" name="plandetail" placeholder="Plan detail"></div>
 
 
-                <input type="submit" value="Submit">
+
+                <div style="left: 50%; width: 250px; height: 50px; top: -170px; position: relative;">  <input type="submit" value="Submit"></div>
             </form>
         </div>
 
