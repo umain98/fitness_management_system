@@ -10,7 +10,7 @@
     <style>
 
         input[type=text], select {
-            width: 400px;
+            width: 500px;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -44,34 +44,26 @@
 
         <h3>Trainer Registration</h3>
 
-        <div>
-            <label for="tname">Trainer Name</label>
-            <input type="text" id="tname" name="trainername" placeholder="Trainer name">
-            <br>
-            <label for="temail">Trainer Email</label>
-            <input type="text" id="temail" name="traineremail" placeholder="Trainer email">
-            <br>
-            <label for="tregdate">Trainer Reg Date</label>
-            <input type="date" id="tregdate" name="treainerregdate" placeholder="Trainer reg date">
-            <br>
-            <label for="contractperiodmonths">Contract Period Months</label>
-            <input type="number" id="contractperiodmonths" name="contractperiodmonths" placeholder="Contract period months">
-            <br>
-            <label for="taddress">Trainer Address</label>
-            <input type="text" id="taddress" name="treaineraddress" placeholder="Trainer address">
-            <br>
-            <label for="tcontact">Trainer Contact</label>
-            <input type="text" id="tcontact" name="trainercontact" placeholder="Trainer contact">
-            <br>
-            <label for="tdetail">Trainer Detail</label>
-            <input type="text" id="tdetail" name="trainerdetail" placeholder="Trainer detail">
-            <br>
-            <br> 
+        <div style="left: 30%; top: 10%; width: 40%; position: absolute;">
+            <div style="left: 5%; width: 250px; height: 50px; top: 20px; position: relative;"><label for="tname">Trainer Name</label> </div>
+            <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;"><input type="text" id="tname" name="trainername" placeholder="Trainer name"></div>
+            <div style="left:5%; width: 250px; height: 50px; top: -30px; position: relative;" ><label for="temail">Trainer Email</label></div>
+            <div style="left: 5%; width: 450px; height: 50px; top: -70px; position: relative;"><input type="text" id="temail" name="traineremail" placeholder="Trainer email"></div>
+            <div style="left: 5%; width: 250px; height: 50px; top: -60px; position: relative;"><label for="tregdate">Trainer Reg Date</label> </div>
+            <div style="left: 5%; width: 450px; height: 50px; top: -100px; position: relative;"><input type="date" id="tregdate" name="treainerregdate" placeholder="Trainer reg date"></div>
+            <div style="left: 5%; width: 250px; height: 50px; top: -90px; position: relative;"><label for="contractperiodmonths">Contract Period Months</label></div>
+            <div style="left: 5%; width: 450px; height: 50px; top: -130px; position: relative;"><input type="number" id="contractperiodmonths" name="contractperiodmonths" placeholder="Contract period months"></div>
+            <div style="left: 5%; width: 250px; height: 50px; top: -120px; position: relative;"><label for="taddress">Trainer Address</label></div>
+            <div style="left: 5%; width: 450px; height: 50px; top: -160px; position: relative;"><input type="text" id="taddress" name="treaineraddress" placeholder="Trainer address"></div>
+            <div style="left: 5%; width: 250px; height: 50px; top: -120px; position: relative;"><label for="tcontact">Trainer Contact</label></div>
+            <div style="left: 5%; width: 450px; height: 50px; top: -160px; position: relative;"><input type="text" id="tcontact" name="trainercontact" placeholder="Trainer contact"></div>
+            <div style="left: 5%; width: 250px; height: 50px; top: -120px; position: relative;"><label for="tdetail">Trainer Detail</label></div>
+            <div style="left: 5%; width: 450px; height: 50px; top: -160px; position: relative;"><input type="text" id="tdetail" name="trainerdetail" placeholder="Trainer detail"></div>
 
 
-            <input type="submit" value="Submit">
-            </form>
-        </div>
+            <div style="left: 50%; width: 250px; height: 50px; top: -120px; position: relative;">  <input type="submit" value="Submit"></div>
+        </form>
+    </div>
 
-    </body>
+</body>
 </html>

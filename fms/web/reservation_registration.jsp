@@ -9,7 +9,7 @@
 <html>
     <style>
         input[type=text], select {
-            width: 400px;
+            width: 500px;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -35,7 +35,7 @@
 
         div {
             border-radius: 5px;
-            background-color: #f2f2f2;
+            background-color:  #f2f2f2;
             padding: 20px;
         }
     </style>
