@@ -17,6 +17,26 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+        
+        input[type=date], select {
+            width: 500px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=number], select {
+            width: 500px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
         input[type=submit] {
             width: 200px;
@@ -57,10 +77,10 @@
                 <div style="left: 5%; width: 450px; height: 50px; top: -220px; position: relative;"><input type="number" id="daysperweek" name="daysperweek" placeholder="Days per week"></div>
                 <div style="left: 5%; width: 250px; height: 50px; top: -200px; position: relative;"><label for="schedulefor">Schedule For</label></div>
                 <div style="left: 5%; width: 450px; height: 50px; top: -250px; position: relative;"><input type="text" id="schedulefor" name="schedulefor" placeholder="Schedule for"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -200px; position: relative;"><label for="specialnote">Special Note</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -250px; position: relative;"><input type="text" id="specialnote" name="specialnote" placeholder="Special Note"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -200px; position: relative;"><label for="detail">Detail</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -250px; position: relative;"><input type="text" id="detail" name="detail" placeholder="Schedule detail"></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -230px; position: relative;"><label for="specialnote">Special Note</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -270px; position: relative;"><input type="text" id="specialnote" name="specialnote" placeholder="Special Note"></div>
+                <div style="left: 5%; width: 250px; height: 50px; top: -250px; position: relative;"><label for="detail">Detail</label></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -290px; position: relative;"><input type="text" id="detail" name="detail" placeholder="Schedule detail"></div>
 
 
                 

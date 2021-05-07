@@ -17,6 +17,16 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+        
+        input[type=number], select {
+            width: 500px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
         input[type=submit] {
             width: 200px;
@@ -48,7 +58,7 @@
                 <div style="left: 5%; width: 250px; height: 50px; top: 20px; position: relative;"><label for="pname">Plan Name</label> </div>
                 <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;"><input type="text" id="pname" name="planname" placeholder="Plan name"></div>
                 <div style="left:5%; width: 250px; height: 50px; top: -30px; position: relative;" ><label for="validperiodmonths">Valid Period Months</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -60px; position: relative;"><input type="number" id="validperiodmonths" name="validperiodmonths" placeholder="Valid period months"></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -80px; position: relative;"><input type="number" id="validperiodmonths" name="validperiodmonths" placeholder="Valid period months"></div>
                 <div style="left: 5%; width: 250px; height: 50px; top: -90px; position: relative;"><label for="personaltrainer">Personal Trainer</label> </div>
                 <div style="left: 5%; width: 450px; height: 50px; top: -130px; position: relative;"><input type="text" id="personaltrainer" name="personaltrainer" placeholder="Personal trainer"></div>
                 <div style="left: 5%; width: 250px; height: 50px; top: -130px; position: relative;"><label for="visitcountmonths">Visit Count Months</label></div>

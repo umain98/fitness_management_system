@@ -1,79 +1,286 @@
-<%-- 
-    Document   : user_registration
-    Created on : May 1, 2021, 1:49:32 PM
-    Author     : USER
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <style>
-        input[type=text], select {
-            width: 500px;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
 
-        input[type=submit] {
-            width: 200px;
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Gutim Template">
+        <meta name="keywords" content="Gutim, unica, creative, html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Life Fitness</title>
 
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+              rel="stylesheet">
 
-        div {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
 
-    </style>
+
+
+
+        <!-- Required meta tags-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Colorlib Templates">
+        <meta name="author" content="Colorlib">
+        <meta name="keywords" content="Colorlib Templates">
+
+        <!-- Icons font CSS-->
+        <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+        <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+        <!-- Font special for pages-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+        <!-- Vendor CSS-->
+        <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+        <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+        <!-- Main CSS-->
+        <link href="css/main123.css" rel="stylesheet" media="all">
+    </head>
+
     <body>
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
 
-        <div>
-            <h3>User Registration</h3>
+        <!-- Header Section Begin -->
+        <header class="header-section">
+            <div class="container">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="img/logos.png" alt=""width=77px>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <br>
+                        <br>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About</a></li>
+                            <li><a href="./classes.html">Classes</a></li>
+                            <li><a href="./shop.html">Shop</a></li>
+                            <li><a href="./gallery.html">Gallery</a></li>
+                            <li><a href="./contact.html">Contacts</a></li>
+                            <li><a href="./Reservation.html">Reservations</a></li>
+                            <li class="active"><a href="/Registration.html">User Registration</a></li>
+                            <li> <a href="./shopping-cart.html"><i class="fa fa-shopping-cart" style="font-size: 50px;color: aliceblue"></a></i></li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Breadcrumb Section Begin -->
+        <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb/cvp.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-text">
+                            <h2>User Registration</h2>
+                            <div class="breadcrumb-option">
+                                <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                                <span>User Registration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Breadcrumb Section End -->
+
+        <div class="container">
+            <div class="row py-5 mt-4 align-items-center">
+                <!-- For Demo Purpose -->
+                <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+                    <img src="img/gallery/gallery-2.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
+                    <h1>Create an Account</h1>
+                    <p class="font-italic text-muted mb-0">You must register to the site here!</p>
+                    <p class="font-italic text-muted"> 
+                    </p>
+                </div>
+
+                <!-- Registeration Form -->
+                <div class="col-md-7 col-lg-6 ml-auto">
+                    <form action="#">
+                        <div class="row">
+
+                            <!-- First Name -->
+                            <div class="input-group col-lg-6 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+                                </div>
+                                <input id="fname" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md">
+                            </div>
+
+                            <!-- Last Name -->
+                            <div class="input-group col-lg-6 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+                                </div>
+                                <input id="lname" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md">
+                            </div>
+
+                            <!-- Contact -->
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-phone-square text-muted"></i>
+                                    </span>
+                                </div>
+                                <select id="countryCode" name="countryCode" style="max-width: 80px" class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
+                                    <option value="">+94</option>
+
+                                </select>
+                                <input id="contact" type="tel" name="contact" placeholder="Contact number" class="form-control bg-white border-md border-left-0 pl-3">
+                            </div>.
+
+                            <!-- Email Address -->
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-envelope text-muted"></i>
+                                    </span>
+                                </div>
+                                <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                            </div>
+                            <!--  Address -->
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+                                </div>
+                                <input id="address" type="text" name="address" placeholder="Address" class="form-control bg-white border-left-0 border-md">
+                            </div>
+                            <!--  Date Of Birth -->
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+                                </div>
+                                <input id="dob" type="date" name="dateofbirth" placeholder="Date of birth" class="form-control bg-white border-left-0 border-md">
+                            </div>
+                            <!--  Height Cm -->
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+                                </div>
+                                <input id="height" type="text" name="height" placeholder="Height" class="form-control bg-white border-left-0 border-md">
+                            </div>
+                            <!--  Weight Kg -->
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+                                </div>
+                                <input id="weight" type="text" name="weight" placeholder="Weight" class="form-control bg-white border-left-0 border-md">
+                            </div>
+                            <!--  Detail -->
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+                                </div>
+                                <input id="detail" type="text" name="detail" placeholder="Detail" class="form-control bg-white border-left-0 border-md">
+                            </div>
+                            <!--  Password -->
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+                                </div>
+                                <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-group col-lg-12 mx-auto mb-0">
+                                <a href="#" class="btn btn-primary btn-block py-2">
+                                    <span class="font-weight-bold">Register Now</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
 
-        <div style="left: 30%; top: 20%; width: 40%; position: absolute;">
-            <form action="/action_page.php">
-                <div style="left: 5%; width: 250px; height: 50px; top: 20px; position: relative;"> <label for="fname">First Name</label> </div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;">  <input type="text" id="fname" name="firstname" placeholder="Your name"></div>
-                <div style="left:5%; width: 250px; height: 50px; top: -30px; position: relative;" > <label for="lname">Last Name</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -80px; position: relative;"><input type="text" id="lname" name="lastname" placeholder="Your last name"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -90px; position: relative;">  <label for="contact">Contact</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -130px; position: relative;"> <input type="text" id="contact" name="contact" placeholder="Your contact number"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -130px; position: relative;"> <label for="email">Email</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -180px; position: relative;"><input type="text" id="email" name="email" placeholder="Your email"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -170px; position: relative;"><label for="address">Address</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -220px; position: relative;"><input type="text" id="address" name="address" placeholder="Your address"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -200px; position: relative;"><label for="dob">Date Of Birth</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -250px; position: relative;"><input type="date" id="dob" name="dateofbirth" placeholder="Your date of birth"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -250px; position: relative;"><label for="height"> Height Cm</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -290px; position: relative;"><input type="text" id="height" name="height" placeholder="Your height"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -280px; position: relative;"><label for="weight"> Weight Kg</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -320px; position: relative;"><input type="text" id="weight" name="weight" placeholder="Your weight"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -320px; position: relative;"><label for="detail">Details</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -350px; position: relative;"><input type="text" id="detail" name="detail" placeholder="Your datail"></div>
-                <div style="left: 5%; width: 250px; height: 50px; top: -350px; position: relative;"> <label for="password">Password</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -380px; position: relative;"> <input type="password" id="password" name="password" placeholder="Your password"></div>
 
 
-                <div style="left: 50%; width: 250px; height: 50px; top: -380px; position: relative;">  <input type="submit" value="Submit"></div>
-            </form>
-        </div>
+        <!-- Footer Section Begin -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-option">
+                            <span>Phone</span>
+                            <p>+94342267652</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-option">
+                            <span>Address</span>
+                            <p>270/17/J,Royal Garden,Horana</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-option">
+                            <span>Email</span>
+                            <p>umain255@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
 
-    </body>
-</html>
+                <div class="copyright-text">
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <!-- Js Plugins -->
+                <script src="js/jquery-3.3.1.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/jquery.magnific-popup.min.js"></script>
+                <script src="js/mixitup.min.js"></script>
+                <script src="js/jquery.slicknav.js"></script>
+                <script src="js/masonry.pkgd.min.js"></script>
+                <script src="js/owl.carousel.min.js"></script>
+                <script src="js/main.js"></script>
+                <!-- Jquery JS-->
+
+                <!-- Vendor JS-->
+                <script src="vendor/select2new/select2.min.js"></script>
+                <script src="vendor/datepicker/moment.min.js"></script>
+                <script src="vendor/datepicker/daterangepicker.js"></script>
+
+                <!-- Main JS-->
+                <script src="js/global.js"></script>
+                </body>
+
+                </html>
