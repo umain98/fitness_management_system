@@ -32,15 +32,15 @@ public class GalleryController {
         gallery.setGalleryId(galleryId);
         gallery.setGallerySection(gallerySection);
         gallery.setGalleryPath(galleryPath);
-        gallery.setGalleryName(galleryName);
+      gallery.setGalleryName(galleryName);
         return new GalleryImpl().updateGalleryById(gallery);
     }
-
-    public static boolean deleteGalleryById(int galleryId) throws SQLException {
+    
+    public static boolean deleteGalleryById(int galleryId) throws SQLException{
         return new GalleryImpl().deleteGalleryById(galleryId);
     }
-
-    public static ResultSet getAllGalleryRecords() throws SQLException {
+    
+    public static ResultSet getAllGalleryRecords() throws SQLException{
         return new GalleryImpl().getAllGalleryRecords();
     }
 }
