@@ -109,7 +109,7 @@
 
                 <!-- Registeration Form -->
                 <div class="col-md-7 col-lg-6 ml-auto">
-                    <form action="#">
+                    <form action="addUserServelet">
                         <div class="row">
 
                             <!-- First Name -->
@@ -119,7 +119,7 @@
                                         <i class="fa fa-user text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="fname" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md">
+                                <input id="fname" type="text" name="txtFirstName" placeholder="First Name" class="form-control bg-white border-left-0 border-md">
                             </div>
 
                             <!-- Last Name -->
@@ -129,7 +129,7 @@
                                         <i class="fa fa-user text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="lname" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md">
+                                <input id="lname" type="text" name="txtLastName" placeholder="Last Name" class="form-control bg-white border-left-0 border-md">
                             </div>
 
                             <!-- Contact -->
@@ -143,7 +143,7 @@
                                     <option value="">+94</option>
 
                                 </select>
-                                <input id="contact" type="tel" name="contact" placeholder="Contact number" class="form-control bg-white border-md border-left-0 pl-3">
+                                <input id="contact" type="tel" name="txtContact" placeholder="Contact number" class="form-control bg-white border-md border-left-0 pl-3">
                             </div>.
 
                             <!-- Email Address -->
@@ -153,7 +153,7 @@
                                         <i class="fa fa-envelope text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                                <input id="email" type="email" name="txtEmail" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
                             </div>
                             <!--  Address -->
                             <div class="input-group col-lg-12 mb-4">
@@ -162,7 +162,7 @@
                                         <i class="fa fa-user text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="address" type="text" name="address" placeholder="Address" class="form-control bg-white border-left-0 border-md">
+                                <input id="address" type="text" name="txtAddress" placeholder="Address" class="form-control bg-white border-left-0 border-md">
                             </div>
                             <!--  Date Of Birth -->
                             <div class="input-group col-lg-12 mb-4">
@@ -171,7 +171,7 @@
                                         <i class="fa fa-user text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="dob" type="date" name="dateofbirth" placeholder="Date of birth" class="form-control bg-white border-left-0 border-md">
+                                <input id="dob" type="date" name="txtDob" placeholder="Date of birth" class="form-control bg-white border-left-0 border-md">
                             </div>
                             <!--  Height Cm -->
                             <div class="input-group col-lg-12 mb-4">
@@ -180,7 +180,7 @@
                                         <i class="fa fa-user text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="height" type="text" name="height" placeholder="Height" class="form-control bg-white border-left-0 border-md">
+                                <input id="height" type="text" name="txtHeightCm" placeholder="Height" class="form-control bg-white border-left-0 border-md">
                             </div>
                             <!--  Weight Kg -->
                             <div class="input-group col-lg-12 mb-4">
@@ -189,7 +189,7 @@
                                         <i class="fa fa-user text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="weight" type="text" name="weight" placeholder="Weight" class="form-control bg-white border-left-0 border-md">
+                                <input id="weight" type="text" name="txtWeightKg" placeholder="Weight" class="form-control bg-white border-left-0 border-md">
                             </div>
                             <!--  Detail -->
                             <div class="input-group col-lg-12 mb-4">
@@ -198,7 +198,7 @@
                                         <i class="fa fa-user text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="detail" type="text" name="detail" placeholder="Detail" class="form-control bg-white border-left-0 border-md">
+                                <input id="detail" type="text" name="txtDetail" placeholder="Detail" class="form-control bg-white border-left-0 border-md">
                             </div>
                             <!--  Password -->
                             <div class="input-group col-lg-12 mb-4">
@@ -207,7 +207,7 @@
                                         <i class="fa fa-user text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
+                                <input id="password" type="password" name="txtPassword" placeholder="Password" class="form-control bg-white border-left-0 border-md">
                             </div>
 
                             <!-- Submit Button -->

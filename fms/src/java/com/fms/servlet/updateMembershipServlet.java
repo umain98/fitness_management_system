@@ -34,13 +34,13 @@ public class updateMembershipServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String planId = request.getParameter("txtPlanId");
-        String planName = request.getParameter("txtPlanName");
-        String validPeriodMonths = request.getParameter("txtValidPeriodMonths");
-        String personalTrainer = request.getParameter("txtPersonalTrainer");
-        String visitCountMonth = request.getParameter("txtVisitCountMonth");
-        String pPrice = request.getParameter("txtPlanPrice");
-        String pDetail = request.getParameter("txtPlanDetail");
+        String membershipPlanId = request.getParameter("txtPlanId");
+        String membershipPlanName = request.getParameter("txtPlanName");
+        String membershipValidPeriodMonths = request.getParameter("txtValidPeriodMonths");
+        String membershipPersonalTrainer = request.getParameter("txtPersonalTrainer");
+        String membershipVisitCountMonth = request.getParameter("txtVisitCountMonth");
+        String membershipPlanPrice = request.getParameter("txtPlanPrice");
+        String membershipPlanDetail = request.getParameter("txtPlanDetail");
 
     }
 

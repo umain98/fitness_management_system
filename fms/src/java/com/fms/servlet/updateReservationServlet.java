@@ -34,13 +34,13 @@ public class updateReservationServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String rId = request.getParameter("txtReservId");
-        String rType = request.getParameter("txtReservType");
-        String rDate = request.getParameter("txtReservDate");
-        String rTime = request.getParameter("txtReservTime");
-        String rUserId = request.getParameter("txtReservUserId");
-        String rUserName = request.getParameter("txtReservUserName");
-        String rDetail = request.getParameter("txtReservDetail");
+        String reservationId = request.getParameter("txtReservId");
+        String reservationType = request.getParameter("txtReservType");
+        String reservationDate = request.getParameter("txtReservDate");
+        String reservationTime = request.getParameter("txtReservTime");
+        String reservationUserId = request.getParameter("txtReservUserId");
+        String reservationUserName = request.getParameter("txtReservUserName");
+        String reservationDetail = request.getParameter("txtReservDetail");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

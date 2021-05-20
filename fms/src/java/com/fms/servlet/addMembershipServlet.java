@@ -34,12 +34,12 @@ public class addMembershipServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String planName = request.getParameter("txtPlanName");
-        String validPeriodMonths = request.getParameter("txtValidPeriodMonths");
-        String personalTrainer = request.getParameter("txtPersonalTrainer");
-        String visitCountMonth = request.getParameter("txtVisitCountMonth");
-        String pPrice = request.getParameter("txtPlanPrice");
-        String pDetail = request.getParameter("txtPlanDetail");
+        String membershipPlanName = request.getParameter("txtPlanName");
+        String membershipValidPeriodMonths = request.getParameter("txtValidPeriodMonths");
+        String membershipPersonalTrainer = request.getParameter("txtPersonalTrainer");
+        String membershipVisitCountMonth = request.getParameter("txtVisitCountMonth");
+        String membershiPlanPrice = request.getParameter("txtPlanPrice");
+        String membershiPlanDetail = request.getParameter("txtPlanDetail");
 
     }
 

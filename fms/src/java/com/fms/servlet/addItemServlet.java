@@ -34,11 +34,11 @@ public class addItemServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String iName = request.getParameter("txtItemName");
-        String iCategory = request.getParameter("txtItemCategory");
-        String iBrand = request.getParameter("txtItemBrand");
-        String iPrice = request.getParameter("txtItemPrice");
-        String idetail = request.getParameter("txtItemDetail");
+        String itemName = request.getParameter("txtItemName");
+        String itemCategory = request.getParameter("txtItemCategory");
+        String itemBrand = request.getParameter("txtItemBrand");
+        String itemPrice = request.getParameter("txtItemPrice");
+        String itemDetail = request.getParameter("txtItemDetail");
 
     }
 

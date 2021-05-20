@@ -34,12 +34,12 @@ public class addReservationServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String rType = request.getParameter("txtReservType");
-        String rDate = request.getParameter("txtReservDate");
-        String rTime = request.getParameter("txtReservTime");
-        String rUserId = request.getParameter("txtReservUserId");
-        String rUserName = request.getParameter("txtReservUserName");
-        String rDetail = request.getParameter("txtReservDetail");
+        String reservationType = request.getParameter("txtReservType");
+        String reservationDate = request.getParameter("txtReservDate");
+        String reservationTime = request.getParameter("txtReservTime");
+        String reservationUserId = request.getParameter("txtReservUserId");
+        String reservationUserName = request.getParameter("txtReservUserName");
+        String reservationDetail = request.getParameter("txtReservDetail");
 
     }
 

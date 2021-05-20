@@ -44,13 +44,13 @@
         <h3>Gallery Registration</h3>
 
         <div style="left: 30%; top: 10%; width: 40%; bottom: 10%; position: absolute;">
-            <form action="/action_page.php">
+            <form action="addGalleryServlet">
                 <div style="left: 5%; width: 250px; height: 50px; top: 20px; position: relative;"> <label for="gsection">Gallery Section</label> </div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;"><input type="text" id="gsection" name="gallerysection" placeholder="Gallery section"></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;"><input type="text" id="gsection" name="txtGallerySection" placeholder="Gallery section"></div>
                 <div style="left:5%; width: 250px; height: 50px; top: -30px; position: relative;" ><label for="gpath">Gallery Path</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -70px; position: relative;"><input type="text" id="gpath" name="gallerypath" placeholder="Gallery path"></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -70px; position: relative;"><input type="text" id="gpath" name="txtGalleryPath" placeholder="Gallery path"></div>
                 <div style="left: 5%; width: 250px; height: 50px; top: -60px; position: relative;"><label for="gname">Gallery Name</label> </div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -100px; position: relative;"><input type="text" id="gname" name="galleryname" placeholder="Gallery name"></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -100px; position: relative;"><input type="text" id="gname" name="txtGalleryName" placeholder="Gallery name"></div>
 
 
                 <div style="left: 50%; width: 250px; height: 50px; top: -60px; position: relative;">  <input type="submit" value="Submit"></div>

@@ -74,22 +74,22 @@
         <h3>Reservation Registration</h3>
 
         <div style="left: 30%; top: 10%; width: 40%; position: absolute;">
-            <form action="/action_page.php">
+            <form action="addReservationServlet">
                 <div style="left: 5%; width: 250px; height: 50px; top: 20px; position: relative;"><label for="rtype">Reservation Type</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;">  <select id="rvtype" name="reservationtype">
+                <div style="left: 5%; width: 450px; height: 50px; top: -30px; position: relative;">  <select id="rvtype" name="txtReservType">
                         <option value="australia">Treadmill</option>
                         <option value="canada">Cycle</option>
                     </select></div>
                 <div style="left:5%; width: 250px; height: 50px; top: -30px; position: relative;" ><label for="rdate">Reservation Date</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -70px; position: relative;"><input type="date" id="rdate" name="reservationdate" placeholder="Reservation date"></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -70px; position: relative;"><input type="date" id="rdate" name="txtReservDate" placeholder="Reservation date"></div>
                 <div style="left: 5%; width: 250px; height: 50px; top: -60px; position: relative;"><label for="rtime">Reservation Time</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -100px; position: relative;"><input type="time" id="rtime" name="reservationtime" placeholder="Reservation time"></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -100px; position: relative;"><input type="time" id="rtime" name="txtReservTime" placeholder="Reservation time"></div>
                 <div style="left: 5%; width: 250px; height: 50px; top: -90px; position: relative;"><label for="ruserid">Reservation User Id</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -130px; position: relative;"><input type="number" id="ruserid" name="reservationuserif" placeholder="Reservation user id"></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -130px; position: relative;"><input type="number" id="ruserid" name="txtReservUserId" placeholder="Reservation user id"></div>
                 <div style="left: 5%; width: 250px; height: 50px; top: -120px; position: relative;"><label for="rusername">Reservation User Name</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -160px; position: relative;"><input type="text" id="rusername" name="reservationusername" placeholder="Reservation user name"></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -160px; position: relative;"><input type="text" id="rusername" name="txtReservUserName" placeholder="Reservation user name"></div>
                 <div style="left: 5%; width: 250px; height: 50px; top: -150px; position: relative;"><label for="rdetail">Reservation Detail</label></div>
-                <div style="left: 5%; width: 450px; height: 50px; top: -190px; position: relative;"><input type="text" id="rdetail" name="reservationdetail" placeholder="Reservation detail"></div>
+                <div style="left: 5%; width: 450px; height: 50px; top: -190px; position: relative;"><input type="text" id="rdetail" name="txtReservDetail" placeholder="Reservation detail"></div>
 
 
                 <div style="left: 50%; width: 250px; height: 50px; top: -170px; position: relative;">  <input type="submit" value="Submit"></div>

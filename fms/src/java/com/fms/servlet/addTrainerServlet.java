@@ -34,13 +34,13 @@ public class addTrainerServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String tName = request.getParameter("txtTrainerName");
-        String tEmail = request.getParameter("txtTrainerEmail");
-        String tRegDate = request.getParameter("txtTrainerRegDate");
-        String conractPeriodMonths = request.getParameter("txtContractPeriodMonths");
-        String tAddress = request.getParameter("txtTrainerAddress");
-        String tContact = request.getParameter("txtTrainerContact");
-        String tDetail = request.getParameter("txtTrainerDetail");
+        String trainerName = request.getParameter("txtTrainerName");
+        String trainerEmail = request.getParameter("txtTrainerEmail");
+        String trainerRegDate = request.getParameter("txtTrainerRegDate");
+        String trainerConractPeriodMonths = request.getParameter("txtContractPeriodMonths");
+        String trainerAddress = request.getParameter("txtTrainerAddress");
+        String trainerContact = request.getParameter("txtTrainerContact");
+        String trainerDetail = request.getParameter("txtTrainerDetail");
 
     }
 

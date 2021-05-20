@@ -35,14 +35,14 @@ public class updateScheduleServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String scheduleId = request.getParameter("txtScheduleId");
-        String createdById = request.getParameter("txtCreatedById");
-        String createdByName = request.getParameter("txtCreatedByName");
-        String startDate = request.getParameter("txtStartDate");
-        String endDate = request.getParameter("txtEndDate");
-        String daysPerWeek = request.getParameter("txtDaysPerWeek");
+        String scheduleCreatedById = request.getParameter("txtCreatedById");
+        String scheduleCreatedByName = request.getParameter("txtCreatedByName");
+        String scheduleStartDate = request.getParameter("txtStartDate");
+        String scheduleEndDate = request.getParameter("txtEndDate");
+        String scheduleDaysPerWeek = request.getParameter("txtDaysPerWeek");
         String scheduleFor = request.getParameter("txtScheduleFor");
-        String specialNote = request.getParameter("txtSpecialFor");
-        String detail = request.getParameter("txtDetail");
+        String scheduleSpecialNote = request.getParameter("txtSpecialFor");
+        String scheduleDetail = request.getParameter("txtDetail");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

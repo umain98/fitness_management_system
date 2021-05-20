@@ -34,12 +34,12 @@ public class updateItemServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String iId = request.getParameter("txtItemId");
-        String iName = request.getParameter("txtItemName");
-        String iCategory = request.getParameter("txtItemCategory");
-        String iBrand = request.getParameter("txtItemBrand");
-        String iPrice = request.getParameter("txtItemPrice");
-        String idetail = request.getParameter("txtItemDetail");
+        String itemId = request.getParameter("txtItemId");
+        String itemName = request.getParameter("txtItemName");
+        String itemCategory = request.getParameter("txtItemCategory");
+        String itemBrand = request.getParameter("txtItemBrand");
+        String itemPrice = request.getParameter("txtItemPrice");
+        String itemdetail = request.getParameter("txtItemDetail");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

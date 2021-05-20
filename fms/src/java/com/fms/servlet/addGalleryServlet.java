@@ -34,9 +34,9 @@ public class addGalleryServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String gSection = request.getParameter("txtGallerySection");
-        String gPath = request.getParameter("txtGalleryPath");
-        String gName = request.getParameter("txtGalleryName");
+        String gallerySection = request.getParameter("txtGallerySection");
+        String galleryPath = request.getParameter("txtGalleryPath");
+        String galleryName = request.getParameter("txtGalleryName");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
