@@ -62,7 +62,7 @@
         </header>
         <!-- Header End -->
 
-        <!-- Breadcrumb Section Begin -->
+        <!-- Middle Section Begin -->
         <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb/cvp.jpg">
             <div class="container">
                 <div class="row">
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </section>
-        <!-- Breadcrumb Section End -->
+        <!-- Middle Section End -->
 
 
 

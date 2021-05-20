@@ -1,7 +1,7 @@
 <%-- 
     Document   : membership_registration
     Created on : May 1, 2021, 3:29:44 PM
-    Author     : USER
+    Author     : UMAIN
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

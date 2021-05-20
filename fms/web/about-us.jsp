@@ -58,7 +58,7 @@
         </header>
         <!-- Header End -->
 
-        <!-- Breadcrumb Section Begin -->
+        <!-- Middle Section Begin -->
         <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb/cvp.jpg">
             <div class="container">
                 <div class="row">
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </section>
-        <!-- Breadcrumb Section End -->
+        <!-- Middle Section End -->
 
         <!-- About Section Begin -->
         <section class="about-section about-page spad">
@@ -142,12 +142,8 @@
                     <div class="col-lg-8">
                         <div class="award-text">
                             <h2>Best gym award 2020/21</h2>
-                            <p>Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean pretium sollicitudin,
-                                nascetur auci elit consequat ipsutissem niuis sed odio sit amet nibh vulputate cursus a
-                                amet.</p>
-                            <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, gravida quam semper libero
-                                sit amet. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, gravida quam
-                                semper libero sit amet.</p>
+                            <p>The best managing staff and the best fitness centre of kaluthara district.</p>
+                            <p>The most populest fitness centre in the wester province award.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -176,8 +172,7 @@
                             <div class="trainer-text">
                                 <h5>Umain Wilfred</h5>
                                 <span>Head Coach</span>
-                                <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                                    voluptatem.</p>
+                                <p>BSC.Hons Degree in Fitness Management</p>
                                 <div class="trainer-social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-instagram"></i></a>
@@ -192,8 +187,7 @@
                             <div class="trainer-text">
                                 <h5>Nimna Induwara</h5>
                                 <span>Assistant coach</span>
-                                <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                                    voluptatem.</p>
+                                <p>10 months experienced in Australian personal training college</p>
                                 <div class="trainer-social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-instagram"></i></a>
@@ -208,8 +202,7 @@
                             <div class="trainer-text">
                                 <h5>Lakindu Liyanage</h5>
                                 <span>Physio</span>
-                                <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                                    voluptatem.</p>
+                                <p>Former SriLankan national physio at Srilanka Cricket</p>
                                 <div class="trainer-social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-instagram"></i></a>

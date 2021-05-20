@@ -1,7 +1,7 @@
 <%-- 
     Document   : trainer_registration
     Created on : May 1, 2021, 4:01:38 PM
-    Author     : USER
+    Author     : UMAIN
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

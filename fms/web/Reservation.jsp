@@ -81,7 +81,7 @@
         </header>
         <!-- Header End -->
 
-        <!-- Breadcrumb Section Begin -->
+        <!-- Middle Section Begin -->
         <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb/cvp.jpg">
             <div class="container">
                 <div class="row">
@@ -97,7 +97,7 @@
                 </div>
             </div>
         </section>
-        <!-- Breadcrumb Section End -->
+        <!-- Middle Section End -->
 
         <div class="container">
             <div class="row py-5 mt-4 align-items-center">
@@ -110,7 +110,7 @@
                     </p>
                 </div>
 
-                <!-- Registeration Form -->
+                <!-- Registration Form -->
                 <div class="col-md-7 col-lg-6 ml-auto">
                     <form action="#">
                         <div class="row">
@@ -123,7 +123,7 @@
                                     </span>
                                 </div>
                                 <select id="job" name="jobtitle" class="form-control custom-select bg-white border-left-0 border-md">
-                                    <option value="">Treadmil</option>
+                                    <option value="">Treadmill</option>
                                 </select>
                             </div>
                             

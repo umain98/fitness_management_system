@@ -1,7 +1,7 @@
 <%-- 
     Document   : gallery_registration
     Created on : May 1, 2021, 3:28:56 PM
-    Author     : USER
+    Author     : Umain
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

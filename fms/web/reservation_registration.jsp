@@ -1,7 +1,7 @@
 <%-- 
     Document   : reservation_registration
     Created on : May 1, 2021, 3:30:03 PM
-    Author     : USER
+    Author     : UMAIN
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

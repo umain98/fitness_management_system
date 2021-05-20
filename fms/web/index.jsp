@@ -243,7 +243,7 @@
                                 </div>
                             </div>
                             <div class="testimonial-item">
-                                <p>?Crawling is acceptable. Falling is acceptable. Puking is acceptable. crying is acceptable. Blood is acceptable. Pain is acceptable. Quitting is not.?</p>
+                                <p>Success usually comes to those who are too busy to be looking for it.</p>
                                 <div class="ti-pic">
                                     <img src="img/testimonial/umi.jpg" alt="">
                                     <div class="quote">
