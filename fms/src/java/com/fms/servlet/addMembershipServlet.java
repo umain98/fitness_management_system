@@ -5,8 +5,13 @@
  */
 package com.fms.servlet;
 
+import com.fms.controller.MembershipController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,6 +45,14 @@ public class addMembershipServlet extends HttpServlet {
         String membershipVisitCountMonth = request.getParameter("txtVisitCountMonth");
         String membershiPlanPrice = request.getParameter("txtPlanPrice");
         String membershiPlanDetail = request.getParameter("txtPlanDetail");
+        
+        try {
+            MembershipController.addMembership(membershipPlanName, 0, 0, 0, BigDecimal.ONE, membershiPlanDetail,  "A");
+        } catch (SQLException ex) {
+            Logger.getLogger(addMembershipServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        response.sendRedirect("membership_registration.jsp");
 
     }
 

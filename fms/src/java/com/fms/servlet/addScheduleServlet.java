@@ -5,6 +5,7 @@
  */
 package com.fms.servlet;
 
+import com.fms.controller.ScheduleController;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -42,6 +43,10 @@ public class addScheduleServlet extends HttpServlet {
         String scheduleFor = request.getParameter("txtScheduleFor");
         String scheduleSpecialNote = request.getParameter("txtSpecialFor");
         String scheduleDetail = request.getParameter("txtDetail");
+        
+        ScheduleController.addSchedule(0, scheduleCreatedByName, startDate, endDate, 0, scheduleFor, scheduleSpecialNote, "A", scheduleDetail);
+        
+        response.sendRedirect("schedule_registration.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -5,8 +5,13 @@
  */
 package com.fms.servlet;
 
+import com.fms.controller.ItemController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -39,6 +44,14 @@ public class addItemServlet extends HttpServlet {
         String itemBrand = request.getParameter("txtItemBrand");
         String itemPrice = request.getParameter("txtItemPrice");
         String itemDetail = request.getParameter("txtItemDetail");
+
+        try {
+            ItemController.addItem(itemName, itemCategory, itemBrand, BigDecimal.ZERO, "A", itemDetail);
+        } catch (SQLException ex) {
+            Logger.getLogger(addItemServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        response.sendRedirect("item_registration.jsp");
 
     }
 

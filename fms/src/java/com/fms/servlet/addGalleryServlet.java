@@ -5,8 +5,12 @@
  */
 package com.fms.servlet;
 
+import com.fms.controller.GalleryController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,6 +41,14 @@ public class addGalleryServlet extends HttpServlet {
         String gallerySection = request.getParameter("txtGallerySection");
         String galleryPath = request.getParameter("txtGalleryPath");
         String galleryName = request.getParameter("txtGalleryName");
+        
+        try {
+            GalleryController.addGallery(gallerySection, galleryPath, galleryName);
+        } catch (SQLException ex) {
+            Logger.getLogger(addGalleryServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        response.sendRedirect("gallery_registration.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

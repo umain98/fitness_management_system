@@ -25,7 +25,7 @@ public class ItemController {
         Item item = new Item();
         item.setItemName(itemName);
         item.setItemCategory(itemCategory);
-        item.getItemBrand(itemBrand);
+        item.setItemBrand(itemBrand);
         item.setItemPrice(itemPrice);
         item.setStatus(itemStatus);
         item.setDetail(itemDetail);
@@ -39,7 +39,7 @@ public class ItemController {
         item.setItemId(itemId);
         item.setItemName(itemName);
         item.setItemCategory(itemCategory);
-        item.getItemBrand(itemBrand);
+        item.setItemBrand(itemBrand);
         item.setItemPrice(itemPrice);
         item.setStatus(itemStatus);
         item.setDetail(itemDetail);

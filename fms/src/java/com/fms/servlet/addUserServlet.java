@@ -48,8 +48,9 @@ public class addUserServlet extends HttpServlet {
         String detail = request.getParameter("txtDetail");
         String password = request.getParameter("txtPassword");
         
-
-//        UserController.addUser(fName, lName, contact, email, address, regDate, dateOfBirth, BigDecimal.ZERO, BigDecimal.ZERO, detail, detail, password);
+        UserController.addUser(fName, lName, contact, email, address, registerDate, dateOfBirth, BigDecimal.ZERO, BigDecimal.ZERO, "A", detail, password);
+        
+        response.sendRedirect("user_registration.jsp");
 
     }
 

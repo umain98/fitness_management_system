@@ -21,7 +21,6 @@ public class Item {
     private BigDecimal itemPrice;
     private String status;
     private String detail;
-    
 
     /**
      * @return the itemId
@@ -94,20 +93,6 @@ public class Item {
     }
 
     /**
-     * @return the detail
-     */
-    public String getDetail() {
-        return detail;
-    }
-
-    /**
-     * @param detail the detail to set
-     */
-    public void setDetail(String detail) {
-        this.detail = detail;
-    }
-
-    /**
      * @return the status
      */
     public String getStatus() {
@@ -121,8 +106,20 @@ public class Item {
         this.status = status;
     }
 
-    public void getItemBrand(String itemBrand) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /**
+     * @return the detail
+     */
+    public String getDetail() {
+        return detail;
     }
+
+    /**
+     * @param detail the detail to set
+     */
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+    
+    
 
 }

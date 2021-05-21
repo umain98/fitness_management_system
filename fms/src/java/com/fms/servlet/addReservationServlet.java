@@ -5,6 +5,7 @@
  */
 package com.fms.servlet;
 
+import com.fms.controller.ReservationController;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -40,9 +41,14 @@ public class addReservationServlet extends HttpServlet {
         String reservationUserId = request.getParameter("txtReservUserId");
         String reservationUserName = request.getParameter("txtReservUserName");
         String reservationDetail = request.getParameter("txtReservDetail");
+        
+        ReservationController.addReservation(reservationType, reservDate, reservTime, 0, reservationUserName, "A", reservationDetail);
 
+        
+        response.sendRedirect("reservation_registration.jsp");
     }
-
+    
+   
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

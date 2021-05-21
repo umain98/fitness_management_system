@@ -5,6 +5,7 @@
  */
 package com.fms.servlet;
 
+import com.fms.controller.TrainerController;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -41,6 +42,10 @@ public class addTrainerServlet extends HttpServlet {
         String trainerAddress = request.getParameter("txtTrainerAddress");
         String trainerContact = request.getParameter("txtTrainerContact");
         String trainerDetail = request.getParameter("txtTrainerDetail");
+        
+        TrainerController.addTrainer(trainerName, trainerEmail, trainerRegDate, 0, trainerAddress, trainerContact, "A", trainerDetail);
+        
+        response.sendRedirect("trainer_registration.jsp");
 
     }
 
