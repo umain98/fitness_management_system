@@ -34,6 +34,15 @@
         <%
             HttpSession ses = request.getSession();
             User user = (User) ses.getAttribute("cur_user");
+            if (user == null) {
+                response.sendRedirect("login.jsp");
+                return;
+            }
+
+            String product = ses.getAttribute("product").toString();
+            String price = ses.getAttribute("price").toString();
+            String qty = ses.getAttribute("qty").toString();
+            String total = ses.getAttribute("total").toString();
         %>
 
         <!-- Header Section Begin -->
@@ -149,15 +158,15 @@
                             <div class="order-table">
                                 <div class="cart-item">
                                     <span>Product</span>
-                                    <p class="product-name">Serious Mass</p>
+                                    <p class="product-name"><%=product%></p>
                                 </div>
                                 <div class="cart-item">
                                     <span>Price</span>
-                                    <p>5000LKR</p>
+                                    <p><%=price%></p>
                                 </div>
                                 <div class="cart-item">
                                     <span>Quantity</span>
-                                    <p>1</p>
+                                    <p><%=qty%></p>
                                 </div>
                                 <div class="cart-item">
                                     <span>Shipping</span>
@@ -166,7 +175,7 @@
 
                                 <div class="cart-total">
                                     <span>Total</span>
-                                    <p>5000LKR</p>
+                                    <p><%=total%></p>
                                 </div>
                             </div>
                         </div>

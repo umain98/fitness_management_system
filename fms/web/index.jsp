@@ -280,7 +280,7 @@
                         <div class="banner-text">
                             <h2>Reserve treadmil now</h2>
                             <p>Due to Covid 19 situation we've created a reservation form for your treadmill usage cause it wll reduce the crowd and also make easy way for your time schedule.</p> 
-                            <a  href="./Reservation.html" class="primary-btn banner-btn">Book Now</a>
+                            <a  href="Reservation.jsp" class="primary-btn banner-btn">Book Now</a>
                             <br>
                             <br>
                             <br>
@@ -297,6 +297,7 @@
         <!-- Reservation Section Begin -->
 
         <!-- Membership Section Begin -->
+
         <section class="membership-section spad">
             <div class="container">
                 <div class="row">
@@ -307,6 +308,7 @@
                     </div>
                 </div>
                 <div class="row">
+
                     <div class="col-lg-4">
                         <div class="membership-item">
                             <div class="mi-title">
@@ -332,9 +334,14 @@
                                     <span>Only for month</span>
                                 </li>
                             </ul>
-                            <a href="#" class="primary-btn membership-btn">Purchase Now</a>
+                            <form action="silverPackage">
+                                <!--<a href="shopItem" class="primary-btn membership-btn">Purchase Now</a>-->
+                                <input class="btn btn-primary btn-block py-2" type="submit" value="Purchase Now">
+
+                            </form>
                         </div>
                     </div>
+
                     <div class="col-lg-4">
                         <div class="membership-item">
                             <div class="mi-title">
@@ -360,9 +367,13 @@
                                     <span>6 months</span>
                                 </li>
                             </ul>
-                            <a href="#" class="primary-btn membership-btn">Purchase Now</a>
+                            <form action="goldPackage">                            
+                                <!--<a href="shopItem" class="primary-btn membership-btn">Purchase Now</a>-->
+                                <input class="btn btn-primary btn-block py-2" type="submit" value="Purchase Now">
+                            </form>
                         </div>
                     </div>
+
                     <div class="col-lg-4">
                         <div class="membership-item">
                             <div class="mi-title">
@@ -388,12 +399,18 @@
                                     <span>365 days</span>
                                 </li>
                             </ul>
-                            <a href="#" class="primary-btn membership-btn">Purchase Now</a>
+
+                            <form action="platinumPackage"> 
+                                <!--<a href="shopItem" class="primary-btn membership-bt //n">Purchase Now</a>-->
+                                <input class="btn btn-primary btn-block py-2" type="submit" value="Purchase Now">
+                            </form>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
+
         <!-- Membership Section End -->
         <br>
         <br>

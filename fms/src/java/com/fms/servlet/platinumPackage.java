@@ -5,7 +5,6 @@
  */
 package com.fms.servlet;
 
-import com.fms.entity.User;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -19,8 +18,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author USER
  */
-@WebServlet(name = "shopItem", urlPatterns = {"/shopItem"})
-public class shopItem extends HttpServlet {
+@WebServlet(name = "platinumPackage", urlPatterns = {"/platinumPackage"})
+public class platinumPackage extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,17 +34,13 @@ public class shopItem extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-
         HttpSession ses = request.getSession();
-        User user = (User) ses.getAttribute("cur_user");
-        
-        
-        if (user != null) {
-            response.sendRedirect("check-out.jsp");
-        } else {
-            response.sendRedirect("login.jsp");
-        }
-
+        ses.setAttribute("product", "Platinum Package");
+        ses.setAttribute("price", "25000.00");
+        ses.setAttribute("qty", "1");
+        ses.setAttribute("total", "25000.00");
+        ses.setAttribute("type", "S");
+        response.sendRedirect("check-out.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
