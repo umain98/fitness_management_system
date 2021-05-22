@@ -34,8 +34,8 @@ public class UserImpl {
         ps.setString(3, user.getContact());
         ps.setString(4, user.getEmail());
         ps.setString(5, user.getAddress());
-        ps.setTimestamp(6, user.getUserRegDate());
-        ps.setDate(7, user.getDateOfBirth());
+        ps.setString(6, user.getUserRegDate());
+        ps.setString(7, user.getDateOfBirth());
         ps.setBigDecimal(8, user.getHeightCm());
         ps.setBigDecimal(9, user.getWeightKg());
         ps.setString(10, user.getStatus());
@@ -69,8 +69,8 @@ public class UserImpl {
         ps.setString(3, user.getContact());
         ps.setString(4, user.getEmail());
         ps.setString(5, user.getAddress());
-        ps.setTimestamp(6, user.getUserRegDate());
-        ps.setDate(7, user.getDateOfBirth());
+        ps.setString(6, user.getUserRegDate());
+        ps.setString(7, user.getDateOfBirth());
         ps.setBigDecimal(8, user.getHeightCm());
         ps.setBigDecimal(9, user.getWeightKg());
         ps.setString(10, user.getStatus());

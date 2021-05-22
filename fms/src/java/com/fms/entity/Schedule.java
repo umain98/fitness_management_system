@@ -14,20 +14,16 @@ import java.sql.Timestamp;
  */
 public class Schedule {
 
-    //schedule_id, schedule_created_by_id, schedule_created_by_name,
-    //schedule_start_date, schedule_end_date, schedule_days_per_week,
-    //schedule_for, schedule_special_note, schedule_status, schedule_detail
     private int scheduleId;
     private int createdById;
     private String createdByName;
-    private Timestamp startDate;
-    private Timestamp endDate;
+    private String startDate;
+    private String endDate;
     private int daysPerWeek;
     private String scheduleFor;
     private String specialNote;
     private String status;
     private String detail;
-    
 
     /**
      * @return the scheduleId
@@ -72,6 +68,34 @@ public class Schedule {
     }
 
     /**
+     * @return the startDate
+     */
+    public String getStartDate() {
+        return startDate;
+    }
+
+    /**
+     * @param startDate the startDate to set
+     */
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    /**
+     * @return the endDate
+     */
+    public String getEndDate() {
+        return endDate;
+    }
+
+    /**
+     * @param endDate the endDate to set
+     */
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    /**
      * @return the daysPerWeek
      */
     public int getDaysPerWeek() {
@@ -113,50 +137,6 @@ public class Schedule {
         this.specialNote = specialNote;
     }
 
-  
-
-    /**
-     * @return the detail
-     */
-    public String getDetail() {
-        return detail;
-    }
-
-    /**
-     * @param detail the detail to set
-     */
-    public void setDetail(String detail) {
-        this.detail = detail;
-    }
-
-    /**
-     * @return the startDate
-     */
-    public Timestamp getStartDate() {
-        return startDate;
-    }
-
-    /**
-     * @param startDate the startDate to set
-     */
-    public void setStartDate(Timestamp startDate) {
-        this.startDate = startDate;
-    }
-
-    /**
-     * @return the endDate
-     */
-    public Timestamp getEndDate() {
-        return endDate;
-    }
-
-    /**
-     * @param endDate the endDate to set
-     */
-    public void setEndDate(Timestamp endDate) {
-        this.endDate = endDate;
-    }
-
     /**
      * @return the status
      */
@@ -171,8 +151,18 @@ public class Schedule {
         this.status = status;
     }
 
-  
+    /**
+     * @return the detail
+     */
+    public String getDetail() {
+        return detail;
+    }
 
-   
+    /**
+     * @param detail the detail to set
+     */
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
 
 }

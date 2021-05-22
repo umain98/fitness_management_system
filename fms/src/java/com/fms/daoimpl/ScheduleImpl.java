@@ -32,8 +32,8 @@ public class ScheduleImpl {
                 + "schedule_detail) values (?,?,?,?,?,?,?,?,?)");
         ps.setInt(1, schedule.getCreatedById());
         ps.setString(2, schedule.getCreatedByName());
-        ps.setTimestamp(3, schedule.getStartDate());
-        ps.setTimestamp(4, schedule.getEndDate());
+        ps.setString(3, schedule.getStartDate());
+        ps.setString(4, schedule.getEndDate());
         ps.setInt(5, schedule.getDaysPerWeek());
         ps.setString(6, schedule.getScheduleFor());
         ps.setString(7, schedule.getSpecialNote());
@@ -64,8 +64,8 @@ public class ScheduleImpl {
                 + "schedule_for=?, schedule_special_note=?, schedule_status=?, schedule_detail=? where schedule_id=? ");
         ps.setInt(1, schedule.getCreatedById());
         ps.setString(2, schedule.getCreatedByName());
-        ps.setTimestamp(3, schedule.getStartDate());
-        ps.setTimestamp(4, schedule.getEndDate());
+        ps.setString(3, schedule.getStartDate());
+        ps.setString(4, schedule.getEndDate());
         ps.setInt(5, schedule.getDaysPerWeek());
         ps.setString(6, schedule.getScheduleFor());
         ps.setString(7, schedule.getSpecialNote());

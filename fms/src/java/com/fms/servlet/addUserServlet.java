@@ -6,9 +6,13 @@
 package com.fms.servlet;
 
 import com.fms.controller.UserController;
+import com.fms.core.Validations;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -47,11 +51,16 @@ public class addUserServlet extends HttpServlet {
         String weightKg = request.getParameter("txtWeightKg");
         String detail = request.getParameter("txtDetail");
         String password = request.getParameter("txtPassword");
-        
-        UserController.addUser(fName, lName, contact, email, address, registerDate, dateOfBirth, BigDecimal.ZERO, BigDecimal.ZERO, "A", detail, password);
-        
-        response.sendRedirect("user_registration.jsp");
 
+        try {
+            UserController.addUser(fName, lName, contact, email,
+                    address, regDate, dob, Validations.getBigDecimalOrZeroFromString(heightCm),
+                    Validations.getBigDecimalOrZeroFromString(weightKg), "A", detail, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(addUserServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        response.sendRedirect("user_registration.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -19,10 +19,9 @@ import java.sql.Timestamp;
  */
 public class UserController {
 
-
     public static boolean addUser(String firstName, String lastName, String contact, String email, String address,
-            Timestamp registerDate, Date dateOfBirth, BigDecimal heightCm, BigDecimal weightKg, String status, String detail,
-            String password) throws SQLException {
+            String registerDate, String dateOfBirth, BigDecimal heightCm, BigDecimal weightKg, String status,
+            String detail, String password) throws SQLException {
         User user = new User();
         user.setFirstName(firstName);
         user.setLastName(lastName);
@@ -39,8 +38,9 @@ public class UserController {
         return new UserImpl().addUser(user);
     }
 
-    public static boolean updateUser(int userId, String firstName, String lastName, String contact, String email, String address,
-            Timestamp registerDate, Date dateOfBirth, BigDecimal heightCm, BigDecimal weightKg, String status, String detail,
+    public static boolean updateUser(int userId, String firstName, String lastName, String contact,
+            String email, String address, String registerDate, String dateOfBirth, BigDecimal heightCm,
+            BigDecimal weightKg, String status, String detail,
             String password) throws SQLException {
         User user = new User();
         user.setUserId(userId);

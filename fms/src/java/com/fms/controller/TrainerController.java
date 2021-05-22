@@ -21,12 +21,12 @@ public class TrainerController {
     trainer_name, trainer_email, trainer_reg_date, trainer_contract_period_months, 
     trainer_address, trainer_contact, trainer_detail, trainer_status
      */
-    public static boolean addTrainer(String trainerName, String trainerEmail, Timestamp trainerRegDate,
-            int contractPeriodMonths, String trainerAddress, String trainerContact, String detail, String status) throws SQLException {
+    public static boolean addTrainer(String trainerName, String trainerEmail,
+            int contractPeriodMonths, String trainerAddress, String trainerContact, 
+            String detail, String status) throws SQLException {
         Trainer trainer = new Trainer();
         trainer.setTrainerName(trainerName);
         trainer.setTrainerEmail(trainerEmail);
-        trainer.setTrainerRegDate(trainerRegDate);
         trainer.setContractPeriodMonths(contractPeriodMonths);
         trainer.setTrainerAddress(trainerAddress);
         trainer.setTrainerContact(trainerContact);

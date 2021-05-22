@@ -20,23 +20,18 @@ public class TrainerImpl {
 
     private String selectQuery = "SELECT * FROM trainers";
 
-    /*
-    trainer_id, trainer_name, trainer_email, trainer_reg_date, trainer_contract_period_months, 
-    trainer_address, trainer_contact, trainer_detail, trainer_status
-     */
     public boolean addTrainer(Trainer trainer) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("insert into trainers(trainer_name, "
-                + " trainer_email, trainer_reg_date, trainer_contract_period_months,  "
-                + " trainer_address, trainer_contact, trainer_detail, trainer_status) values (?,?,?,?,?,?,?,?)");
+                + " trainer_email, trainer_contract_period_months,  "
+                + " trainer_address, trainer_contact, trainer_detail, trainer_status) values (?,?,?,?,?,?,?)");
         ps.setString(1, trainer.getTrainerName());
         ps.setString(2, trainer.getTrainerEmail());
-        ps.setTimestamp(3, trainer.getTrainerRegDate());
-        ps.setInt(4, trainer.getContractPeriodMonths());
-        ps.setString(5, trainer.getTrainerAddress());
-        ps.setString(6, trainer.getTrainerContact());
-        ps.setString(7, trainer.getDetail());
-        ps.setString(8, trainer.getStatus());
+        ps.setInt(3, trainer.getContractPeriodMonths());
+        ps.setString(4, trainer.getTrainerAddress());
+        ps.setString(5, trainer.getTrainerContact());
+        ps.setString(6, trainer.getDetail());
+        ps.setString(7, trainer.getStatus());
         ps.executeUpdate();
         ps.close();
         return true;
@@ -59,16 +54,16 @@ public class TrainerImpl {
     public boolean updateTrainerById(Trainer trainer) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("update trainers set trainer_name=?,"
-                + " trainer_email=?, trainer_reg_date=?, trainer_contract_period_months=?, trainer_address=?,"
+                + " trainer_email=?, trainer_contract_period_months=?, trainer_address=?,"
                 + " trainer_contact=?, trainer_detail=?, trainer_status=? where trainer_id=? ");
         ps.setString(1, trainer.getTrainerName());
         ps.setString(2, trainer.getTrainerEmail());
-        ps.setTimestamp(3, trainer.getTrainerRegDate());
-        ps.setInt(4, trainer.getContractPeriodMonths());
-        ps.setString(5, trainer.getTrainerAddress());
-        ps.setString(6, trainer.getTrainerContact());
-        ps.setString(7, trainer.getDetail());
-        ps.setString(8, trainer.getStatus());
+        ps.setInt(3, trainer.getContractPeriodMonths());
+        ps.setString(4, trainer.getTrainerAddress());
+        ps.setString(5, trainer.getTrainerContact());
+        ps.setString(6, trainer.getDetail());
+        ps.setString(7, trainer.getStatus());
+        ps.setInt(8, trainer.getTrainerId());
         ps.executeUpdate();
         ps.close();
         return true;

@@ -6,8 +6,12 @@
 package com.fms.servlet;
 
 import com.fms.controller.TrainerController;
+import com.fms.core.Validations;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,14 +41,19 @@ public class addTrainerServlet extends HttpServlet {
 
         String trainerName = request.getParameter("txtTrainerName");
         String trainerEmail = request.getParameter("txtTrainerEmail");
-        String trainerRegDate = request.getParameter("txtTrainerRegDate");
         String trainerConractPeriodMonths = request.getParameter("txtContractPeriodMonths");
         String trainerAddress = request.getParameter("txtTrainerAddress");
         String trainerContact = request.getParameter("txtTrainerContact");
         String trainerDetail = request.getParameter("txtTrainerDetail");
-        
-        TrainerController.addTrainer(trainerName, trainerEmail, trainerRegDate, 0, trainerAddress, trainerContact, "A", trainerDetail);
-        
+
+        try {
+            TrainerController.addTrainer(trainerName, trainerEmail,
+                    Validations.getIntOrZeroFromString(trainerConractPeriodMonths),
+                    trainerAddress, trainerContact, trainerDetail, "A");
+        } catch (SQLException ex) {
+            Logger.getLogger(addTrainerServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         response.sendRedirect("trainer_registration.jsp");
 
     }

@@ -26,8 +26,8 @@ public class User {
     private String contact;
     private String email;
     private String address;
-    private Timestamp userRegDate;
-    private Date dateOfBirth;
+    private String userRegDate;
+    private String dateOfBirth;
     private BigDecimal heightCm;
     private BigDecimal weightKg;
     private String status;
@@ -121,28 +121,28 @@ public class User {
     /**
      * @return the userRegDate
      */
-    public Timestamp getUserRegDate() {
+    public String getUserRegDate() {
         return userRegDate;
     }
 
     /**
      * @param userRegDate the userRegDate to set
      */
-    public void setUserRegDate(Timestamp userRegDate) {
+    public void setUserRegDate(String userRegDate) {
         this.userRegDate = userRegDate;
     }
 
     /**
      * @return the dateOfBirth
      */
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
     /**
      * @param dateOfBirth the dateOfBirth to set
      */
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -174,7 +174,19 @@ public class User {
         this.weightKg = weightKg;
     }
 
-   
+    /**
+     * @return the status
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     /**
      * @return the detail
@@ -202,20 +214,6 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    /**
-     * @return the status
-     */
-    public String getStatus() {
-        return status;
-    }
-
-    /**
-     * @param status the status to set
-     */
-    public void setStatus(String status) {
-        this.status = status;
     }
 
 }

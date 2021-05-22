@@ -31,8 +31,8 @@ public class ReservationImpl {
                 + " values (?,?,?,?,?,?,?)");
 
         ps.setString(1, reservation.getReservType());
-        ps.setTimestamp(2, reservation.getReservDate());
-        ps.setTime(3, reservation.getReservTime());
+        ps.setString(2, reservation.getReservDate());
+        ps.setString(3, reservation.getReservTime());
         ps.setInt(4, reservation.getReservUserId());
         ps.setString(5, reservation.getReservUserName());
         ps.setString(6, reservation.getStatus());
@@ -61,8 +61,8 @@ public class ReservationImpl {
                 + " reservation_date=?, reservation_time=?, reservation_user_id=?, reservation_user_name=?,"
                 + " reservation_status=?, reservation_detail=? where reservation_id=? ");
         ps.setString(1, reservation.getReservType());
-        ps.setTimestamp(2, reservation.getReservDate());
-        ps.setTime(3, reservation.getReservTime());
+        ps.setString(2, reservation.getReservDate());
+        ps.setString(3, reservation.getReservTime());
         ps.setInt(4, reservation.getReservUserId());
         ps.setString(5, reservation.getReservUserName());
         ps.setString(6, reservation.getStatus());

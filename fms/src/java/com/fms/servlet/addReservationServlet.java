@@ -5,9 +5,14 @@
  */
 package com.fms.servlet;
 
+import com.fms.controller.CommonController;
 import com.fms.controller.ReservationController;
+import com.fms.core.Validations;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,14 +46,19 @@ public class addReservationServlet extends HttpServlet {
         String reservationUserId = request.getParameter("txtReservUserId");
         String reservationUserName = request.getParameter("txtReservUserName");
         String reservationDetail = request.getParameter("txtReservDetail");
-        
-        ReservationController.addReservation(reservationType, reservDate, reservTime, 0, reservationUserName, "A", reservationDetail);
+        int userId = 0;
+        String userName = "";
+        try {
+            //YYYY-MM-DD hh:mm:ss
+            ReservationController.addReservation(reservationType, reservationDate, reservationTime,
+                    userId, userName, "A", reservationDetail);
+        } catch (SQLException ex) {
+            Logger.getLogger(addReservationServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-        
         response.sendRedirect("reservation_registration.jsp");
     }
-    
-   
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

@@ -6,8 +6,12 @@
 package com.fms.servlet;
 
 import com.fms.controller.ScheduleController;
+import com.fms.core.Validations;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,9 +47,17 @@ public class addScheduleServlet extends HttpServlet {
         String scheduleFor = request.getParameter("txtScheduleFor");
         String scheduleSpecialNote = request.getParameter("txtSpecialFor");
         String scheduleDetail = request.getParameter("txtDetail");
-        
-        ScheduleController.addSchedule(0, scheduleCreatedByName, startDate, endDate, 0, scheduleFor, scheduleSpecialNote, "A", scheduleDetail);
-        
+
+        int userId = 0;
+        String userName = "";
+        try {
+            ScheduleController.addSchedule(userId, scheduleCreatedByName, scheduleStartDate,
+                    scheduleEndDate, Validations.getIntOrZeroFromString(scheduleDaysPerWeek),
+                    scheduleFor, scheduleSpecialNote, "A", scheduleDetail);
+        } catch (SQLException ex) {
+            Logger.getLogger(addScheduleServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         response.sendRedirect("schedule_registration.jsp");
     }
 
