@@ -1,3 +1,4 @@
+<%@page import="com.fms.entity.User"%>
 <!DOCTYPE html>
 <html>
 
@@ -34,7 +35,6 @@
                 <div class="logo">
                     <a href="./index.html">
                         <img src="img/logos.png" alt=""width=77px>
-
                     </a>
                 </div>
                 <div class="nav-menu">
@@ -48,10 +48,23 @@
                             <li><a href="./contact.html">Contacts</a></li>
                             <li><a href="./Reservation.html">Reservations</a></li>
                             <li><a href="/Registration.html">User Registration</a></li>
-                           
                         </ul>
                     </nav>
-                    <a href="" class="primary-btn signup-btn">Log in as Admin</a>
+                    <%
+                        HttpSession ses = request.getSession();
+                        User user = (User) ses.getAttribute("cur_user");
+                        if (user != null) {
+                    %>
+                    <h3 class="primary-btn signup-btn"> Hi, <%=user.getEmail()%>   <a href="logout">Logout</a></h3>
+                    <%
+                    } else {
+                    %>
+                    <a href="login.jsp" class="primary-btn signup-btn">Log in</a>
+                    <%
+                        }
+                    %>
+
+
                 </div>
                 <div id="mobile-menu-wrap"></div>
             </div>
@@ -66,7 +79,7 @@
                         <div class="hero-text" style="margin-left:-300px">
                             <span>All your need to your door step</span><br>
                             <br>
-                            <a href="./shop.html" class="primary-btn">Shop now</a>
+                            <a href="shop.jsp" class="primary-btn">Shop now</a>
                         </div>
                     </div>
                 </div>

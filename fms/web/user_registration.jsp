@@ -212,9 +212,14 @@
 
                             <!-- Submit Button -->
                             <div class="form-group col-lg-12 mx-auto mb-0">
-                                <a href="#" class="btn btn-primary btn-block py-2">
-                                    <span class="font-weight-bold">Register Now</span>
-                                </a>
+                                <!--                                <a href="#" class="btn btn-primary btn-block py-2">
+                                                                    <button class="font-weight-bold">Register Now</button>>
+                                                                    <input class="font-weight-bold" type="submit" value="Register Now">
+                                                                </a>-->
+                                <!--<a href="#" class="btn btn-primary btn-block py-2">-->
+                                <!--                                    <button class="font-weight-bold">Register Now</button>>-->
+                                <input class="btn btn-primary btn-block py-2" type="submit" value="Register Now">
+                                <!--</a>-->
                             </div>
 
                         </div>

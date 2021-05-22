@@ -5,25 +5,21 @@
  */
 package com.fms.servlet;
 
-import com.fms.controller.UserController;
-import com.fms.core.Validations;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author USER
  */
-@WebServlet(name = "addUserServelet", urlPatterns = {"/addUserServelet"})
-public class addUserServlet extends HttpServlet {
+@WebServlet(name = "logout", urlPatterns = {"/logout"})
+public class logout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,27 +35,12 @@ public class addUserServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String fName = request.getParameter("txtFirstName");
-        String lName = request.getParameter("txtLastName");
-        String contact = request.getParameter("txtContact");
-        String email = request.getParameter("txtEmail");
-        String address = request.getParameter("txtAddress");
-        String regDate = request.getParameter("txtRegDate");
-        String dob = request.getParameter("txtDob");
-        String heightCm = request.getParameter("txtHeightCm");
-        String weightKg = request.getParameter("txtWeightKg");
-        String detail = request.getParameter("txtDetail");
-        String password = request.getParameter("txtPassword");
+        HttpSession ses = request.getSession();
+        ses.removeAttribute("cur_user");
+        ses.invalidate();
+        response.sendRedirect("index.jsp");
+        return;
 
-        try {
-            UserController.addUser(fName, lName, contact, email,
-                    address, regDate, dob, Validations.getBigDecimalOrZeroFromString(heightCm),
-                    Validations.getBigDecimalOrZeroFromString(weightKg), "A", detail, password);
-        } catch (SQLException ex) {
-            Logger.getLogger(addUserServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        response.sendRedirect("user_registration.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

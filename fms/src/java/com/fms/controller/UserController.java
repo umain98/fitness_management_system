@@ -8,10 +8,8 @@ package com.fms.controller;
 import com.fms.daoimpl.UserImpl;
 import com.fms.entity.User;
 import java.math.BigDecimal;
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 
 /**
  *
@@ -67,4 +65,9 @@ public class UserController {
     public static ResultSet getAllUserRecords() throws SQLException {
         return new UserImpl().getAllUserRecords();
     }
+
+    public static User getUserByUnameAndPw(String uname, String pw) throws SQLException {
+        return new UserImpl().getUserByUserNameAndPassword(uname, pw);
+    }
+
 }
