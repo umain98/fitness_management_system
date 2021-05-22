@@ -41,19 +41,19 @@
                         <br>
                         <br>
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about-us.html">About</a></li>
-                            <li><a href="./classes.html">Classes</a></li>
-                            <li class="active"><a href="./shop.html">Shop</a>
+                            <li><a href="index.jsp">Home</a></li>
+                            <li><a href="about-us.jsp">About</a></li>
+                            <li><a href="classes.jsp">Classes</a></li>
+                            <li class="active"><a href="shop.jsp">Shop</a>
                                 <!-- <ul class="sub-menu"> -->
                                 <!-- <li><a href="check-out.html">check-out</a></li> -->
                                 <!-- </ul> -->
-                            <li><a href="./gallery.html">Gallery</a></li>
-                            <li><a href="./contact.html">Contacts</a></li>
-                            <li><a href="./Reservation.html">Reservations</a></li>
-                            <li><a href="/Registration.html">User Registration</a></li>
-                            <li> <a href="./shopping-cart.html"><i class="fa fa-shopping-cart" style="font-size: 50px;color: aliceblue"></a></i></li>
-                            
+                            <li><a href="gallery.jsp">Gallery</a></li>
+                            <li><a href="contact.jsp">Contacts</a></li>
+                            <li><a href="Reservation.jsp">Reservations</a></li>
+                            <li><a href="Registration.jsp">User Registration</a></li>
+                            <li> <a href="shopping-cart.jsp"><i class="fa fa-shopping-cart" style="font-size: 50px;color: aliceblue"></a></i></li>
+
                         </ul>
                     </nav>
 
@@ -94,28 +94,28 @@
                         <img src="img/product/amino.jpg" alt="" />
                         <div class="columnText">Amino Acid Powder with Caffeine from Natural Sources<br />
                             Designed to Support Muscle Endurance and Recovery</div>
-                        <div class="columnLink">5000LKR <span class="order">| <a href="./shopping-cart.html">Add To Cart</a></span> </div>
+                        <div class="columnLink">5000LKR <span class="order">| <a href="shopItem">Add To Cart</a></span> </div>
                     </div>
                     <div class="column1">
                         <h3>Nitrotech Gold</h3>
                         <img src="img/product/nitro.jpg" alt="" />
                         <div class="columnText1">The whey protein in Nitro-Tech features high quality whey protein peptides.  <br />
                             isolate as its primary source of protein  </div>
-                        <div class="columnLink">15,000LKR <span class="order">| <a href="./shopping-cart.html">Add To Cart</a></span> </div>
+                        <div class="columnLink">15,000LKR <span class="order">| <a href="shopItem">Add To Cart</a></span> </div>
                     </div>
                     <div class="column1">
                         <h3>Animal Cut</h3>
                         <img src="img/product/Animal cut.jpg" alt="" />
                         <div class="columnText1">The All-in-one Complete Fat Burner Supplement with Thermogenic and Metabolism Support<br />
                             laims to shred body fat, support a healthy appetite</div>
-                        <div class="columnLink">6500LKR<span class="order">| <a href="./shopping-cart.html">Add To Cart</a></span> </div>
+                        <div class="columnLink">6500LKR<span class="order">| <a href="shopItem">Add To Cart</a></span> </div>
                     </div>
                     <div class="column2">
                         <h3>Serious Mass</h3>
                         <img src="img/product/mass.jpg" alt="4" />
                         <div class="columnText1">Optimum Nutrition Serious Mass Weight Gainer Protein Powder, Vitamin C, Zinc and Vitamin D for Immune Support <br />
                         </div>
-                        <div class="columnLink">5000LKR <span class="order">| <a href="./shopping-cart.html">Add To Cart</a></span> </div>
+                        <div class="columnLink">5000LKR <span class="order">| <a href="shopItem">Add To Cart</a></span> </div>
                     </div>
                     <div class="clear"></div>
                 </div>

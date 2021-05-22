@@ -64,7 +64,6 @@
                         }
                     %>
 
-
                 </div>
                 <div id="mobile-menu-wrap"></div>
             </div>
@@ -86,7 +85,6 @@
             </div>
         </section>
         <!-- Hero Section End -->
-
         <!-- About Section Begin -->
         <section class="about-section spad">
             <div class="container">
@@ -94,7 +92,6 @@
                     <div class="col-lg-6">
                         <div class="about-pic">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/wnHW6o8WMas?start=4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+<%@page import="com.fms.entity.User"%>
 <!DOCTYPE html>
 <html>
 
@@ -30,7 +31,10 @@
             <div class="loader"></div>
         </div>
 
-
+        <%
+            HttpSession ses = request.getSession();
+            User user = (User) ses.getAttribute("cur_user");
+        %>
 
         <!-- Header Section Begin -->
         <header class="header-section">
@@ -45,16 +49,16 @@
                         <br>
                         <br>
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about-us.html">About</a></li>
-                            <li><a href="./classes.html">Classes</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
-                            <li><a href="./gallery.html">Gallery</a></li>
-                            <li><a href="./contact.html">Contacts</a></li>
-                            <li class="active"><a href="./check-out.html">check-out</a></li>
-                            <li><a href="./Reservation.html">Reservations</a></li>
-                            <li><a href="/Registration.html">User Registration</a></li>
-                            <li> <a href="./shopping-cart.html"><i class="fa fa-shopping-cart" style="font-size: 50px;color: aliceblue"></a></i></li>
+                            <li><a href="index.jsp">Home</a></li>
+                            <li><a href="about-us.jsp">About</a></li>
+                            <li><a href="classes.jsp">Classes</a></li>
+                            <li><a href="shop.jsp">Shop</a></li>
+                            <li><a href="gallery.jsp">Gallery</a></li>
+                            <li><a href="contact.jsp">Contacts</a></li>
+                            <li class="active"><a href="check-out.jsp">check-out</a></li>
+                            <li><a href="Reservation.jsp">Reservations</a></li>
+                            <li><a href="Registration.jsp">User Registration</a></li>
+                            <li> <a href="shopping-cart.jsp"><i class="fa fa-shopping-cart" style="font-size: 50px;color: aliceblue"></a></i></li>
                         </ul>
                     </nav>
                 </div>
@@ -110,10 +114,10 @@
                                     <p class="in-name">Name*</p>
                                 </div>
                                 <div class="col-lg-5">
-                                    <input type="text" placeholder="First Name">
+                                    <input type="text" placeholder="First Name" value="<%=user.getFirstName()%>">
                                 </div>
                                 <div class="col-lg-5">
-                                    <input type="text" placeholder="Last Name">
+                                    <input type="text" placeholder="Last Name" value="<%=user.getLastName()%>">
                                 </div>
                             </div>
                             <div class="row">
@@ -121,7 +125,7 @@
                                     <p class="in-name">Street Address*</p>
                                 </div>
                                 <div class="col-lg-10">
-                                    <input type="text" placeholder="Your Current Adress">
+                                    <input type="text" placeholder="Your Current Adress" value="<%=user.getAddress()%>">
                                 </div>
                             </div>
                             <div class="row">
@@ -137,7 +141,7 @@
                                     <p class="in-name">Phone*</p>
                                 </div>
                                 <div class="col-lg-10">
-                                    <input type="text">
+                                    <input type="text"  value="<%=user.getContact()%>">
                                 </div>
                             </div>
                         </div>
