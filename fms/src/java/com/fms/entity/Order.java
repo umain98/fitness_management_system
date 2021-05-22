@@ -13,6 +13,7 @@ import java.sql.Timestamp;
  * @author USER
  */
 public class Order {
+
     /*order_id, order_id_string, order_date_time, order_item_qty, order_total_price,
     order_total_discount, order_delivery_address, order_user_id, order_user_name */
 
@@ -25,6 +26,8 @@ public class Order {
     private String deliveryAddress;
     private int userId;
     private String userName;
+    private String type;
+    private String detail;
 
     /**
      * @return the orderId
@@ -151,7 +154,33 @@ public class Order {
     public void setUserName(String userName) {
         this.userName = userName;
     }
-    
-    
-    
+
+    /**
+     * @return the type
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * @param type the type to set
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * @return the detail
+     */
+    public String getDetail() {
+        return detail;
+    }
+
+    /**
+     * @param detail the detail to set
+     */
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
 }

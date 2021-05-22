@@ -23,7 +23,7 @@ public class OrderControlller {
       order_total_discount, order_delivery_address, order_user_id, order_user_name
      */
     public static boolean addOrder(String idString, Timestamp dateTime, int itemQty,
-            BigDecimal totalPrice, BigDecimal totalDiscount, String deliveryAddress, int userId, String userName) throws SQLException {
+            BigDecimal totalPrice, BigDecimal totalDiscount, String deliveryAddress, int userId, String userName, String type, String detail) throws SQLException {
         Order order = new Order();
         order.setIdString(idString);
         order.setDateTime(dateTime);
@@ -33,12 +33,14 @@ public class OrderControlller {
         order.setDeliveryAddress(deliveryAddress);
         order.setUserId(userId);
         order.setUserName(userName);
+        order.setType(type);
+        order.setDetail(detail);
         return new OrderImpl().addOrder(order);
-        
+
     }
-    
-    public static boolean updateOrder(int orderId,String idString, Timestamp dateTime, int itemQty,
-            BigDecimal totalPrice, BigDecimal totalDiscount, String deliveryAddress, int userId, String userName) throws SQLException{
+
+    public static boolean updateOrder(int orderId, String idString, Timestamp dateTime, int itemQty,
+            BigDecimal totalPrice, BigDecimal totalDiscount, String deliveryAddress, int userId, String userName) throws SQLException {
         Order order = new Order();
         order.setOrderId(orderId);
         order.setIdString(idString);
@@ -51,12 +53,12 @@ public class OrderControlller {
         order.setUserName(userName);
         return new OrderImpl().updateOrderById(order);
     }
-    
-    public static boolean deleteOrderById(int orderId) throws SQLException{
+
+    public static boolean deleteOrderById(int orderId) throws SQLException {
         return new OrderImpl().deleteOrderById(orderId);
     }
-    
-    public static ResultSet getAllOrderRecords() throws SQLException{
+
+    public static ResultSet getAllOrderRecords() throws SQLException {
         return new OrderImpl().getAllOrderRecords();
     }
 }
