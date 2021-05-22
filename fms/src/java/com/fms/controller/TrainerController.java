@@ -5,7 +5,7 @@
  */
 package com.fms.controller;
 
-import com.fms.dao.impl.TrainerImpl;
+import com.fms.daoimpl.TrainerImpl;
 import com.fms.entity.Trainer;
 import java.sql.ResultSet;
 import java.sql.SQLException;

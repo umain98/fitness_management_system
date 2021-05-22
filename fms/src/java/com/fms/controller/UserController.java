@@ -5,7 +5,7 @@
  */
 package com.fms.controller;
 
-import com.fms.dao.impl.UserImpl;
+import com.fms.daoimpl.UserImpl;
 import com.fms.entity.User;
 import java.math.BigDecimal;
 import java.sql.Date;

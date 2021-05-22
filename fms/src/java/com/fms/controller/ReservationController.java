@@ -5,8 +5,9 @@
  */
 package com.fms.controller;
 
-import com.fms.dao.impl.ReservationImpl;
+import com.fms.daoimpl.ReservationImpl;
 import com.fms.entity.Reservation;
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
@@ -22,7 +23,7 @@ public class ReservationController {
     reservation_type, reservation_date, reservation_time,
     reservation_user_id, reservation_user_name, reservation_status, reservation_detail
      */
-    public static boolean addReservation(String reservType, Timestamp reservDate, Time reservTime,
+    public static boolean addReservation(String reservType, Date reservDate, Time reservTime,
             int reservUserId, String reservUserName, String status, String detail) throws SQLException {
         Reservation reservation = new Reservation();
         reservation.setReservType(reservType);
@@ -35,7 +36,7 @@ public class ReservationController {
         return new ReservationImpl().addReservation(reservation);
     }
 
-    public static boolean updateReservation(int reservId, String reservType, Timestamp reservDate, Time reservTime,
+    public static boolean updateReservation(int reservId, String reservType, Date reservDate, Time reservTime,
             int reservUserId, String reservUserName, String status, String detail) throws SQLException {
         Reservation reservation = new Reservation();
         reservation.setReservId(reservId);

@@ -5,7 +5,7 @@
  */
 package com.fms.controller;
 
-import com.fms.dao.impl.GalleryImpl;
+import com.fms.daoimpl.GalleryImpl;
 import com.fms.entity.Gallery;
 import java.sql.ResultSet;
 import java.sql.SQLException;

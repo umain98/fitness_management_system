@@ -5,7 +5,7 @@
  */
 package com.fms.controller;
 
-import com.fms.dao.impl.MembershipImpl;
+import com.fms.daoimpl.MembershipImpl;
 import com.fms.entity.Membership;
 import java.math.BigDecimal;
 import java.sql.ResultSet;

@@ -5,7 +5,7 @@
  */
 package com.fms.controller;
 
-import com.fms.dao.impl.ScheduleImpl;
+import com.fms.daoimpl.ScheduleImpl;
 import com.fms.entity.Schedule;
 import java.sql.ResultSet;
 import java.sql.SQLException;

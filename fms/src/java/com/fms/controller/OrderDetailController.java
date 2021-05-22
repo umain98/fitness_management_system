@@ -5,7 +5,7 @@
  */
 package com.fms.controller;
 
-import com.fms.dao.impl.OrderDetailImpl;
+import com.fms.daoimpl.OrderDetailImpl;
 import com.fms.entity.OrderDetail;
 import java.math.BigDecimal;
 import java.sql.ResultSet;

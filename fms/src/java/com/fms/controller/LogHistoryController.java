@@ -5,7 +5,7 @@
  */
 package com.fms.controller;
 
-import com.fms.dao.impl.LogHistoryImpl;
+import com.fms.daoimpl.LogHistoryImpl;
 import com.fms.entity.LogHistory;
 import java.sql.ResultSet;
 import java.sql.SQLException;

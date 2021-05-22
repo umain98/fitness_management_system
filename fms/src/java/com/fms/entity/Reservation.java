@@ -5,6 +5,7 @@
  */
 package com.fms.entity;
 
+import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
 
@@ -18,7 +19,7 @@ public class Reservation {
     //reservation_user_id, reservation_user_name, reservation_status, reservation_detail
     private int reservId;
     private String reservType;
-    private Timestamp reservDate;
+    private Date reservDate;
     private Time reservTime;
     private int reservUserId;
     private String reservUserName;
@@ -56,14 +57,14 @@ public class Reservation {
     /**
      * @return the reservDate
      */
-    public Timestamp getReservDate() {
+    public Date getReservDate() {
         return reservDate;
     }
 
     /**
      * @param reservDate the reservDate to set
      */
-    public void setReservDate(Timestamp reservDate) {
+    public void setReservDate(Date reservDate) {
         this.reservDate = reservDate;
     }
     

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fms.dao.impl;
+package com.fms.daoimpl;
 
 import com.fms.databaseconnecttion.DatabaseConnection;
 import com.fms.entity.Trainer;
