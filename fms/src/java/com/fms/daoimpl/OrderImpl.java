@@ -62,6 +62,18 @@ public class OrderImpl {
         return ps.executeQuery();
     }
 
+    public int getActiveOrdersAndServiceByStatus(String status) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("select count(order_id) as order_count from orders where order_type=?");
+        ps.setString(1, status);
+        ResultSet rset = ps.executeQuery();
+        int count = 0;
+        while (rset.next()) {
+            count = rset.getInt("order_count");
+        }
+        return count;
+    }
+
     public boolean updateOrderById(Order order) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("update order set order_id_string=?,"

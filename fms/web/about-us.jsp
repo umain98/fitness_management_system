@@ -1,3 +1,4 @@
+<%@page import="com.fms.controller.OrderControlller"%>
 <%@page import="com.fms.controller.UserController"%>
 <!DOCTYPE html>
 <html >
@@ -111,13 +112,13 @@
                     <div class="col-lg-12">
                         <div class="about-counter-text">
                             <div class="single-counter">
-                                <h1 class="counter-num count">10</h1>
+                                <h1 class="counter-num count"><%=OrderControlller.getActiveOrdersAndServiceByStatus("P")%></h1>
                                 <span>+</span>
-                                <p>Programs</p>
+                                <p>Active Product Orders</p>
                             </div>
                             <div class="single-counter">
-                                <h1 class="counter-num count">2</h1>
-                                <p>Branches</p>
+                                <h1 class="counter-num count"><%=OrderControlller.getActiveOrdersAndServiceByStatus("S")%></h1>
+                                <p>Active Service Orders</p>
                             </div>
                             <div class="single-counter">
                                 <h1 class="counter-num count"><%=UserController.getAllCount()%></h1>

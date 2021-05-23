@@ -65,4 +65,9 @@ public class OrderControlller {
     public static ResultSet getOrderByStatus(String status) throws SQLException {
         return new OrderImpl().getOrdersByStatus(status);
     }
+
+    public static int getActiveOrdersAndServiceByStatus(String status) throws SQLException {
+        return new OrderImpl().getActiveOrdersAndServiceByStatus(status);
+    }
+
 }

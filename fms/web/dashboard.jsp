@@ -1,3 +1,4 @@
+<%@page import="com.fms.controller.OrderControlller"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -121,17 +122,12 @@
         </div>
         <div class="card text-white bg-primary mb-3" style="max-width: 20rem; position: absolute; left: 35%; top: 17%; width: 14%; height: 80px; z-index:-1;">
             <div style="position: absolute; left: 0%; align-content: center; padding-top: 6%; width: 100%; height: 80px;"  class="card-header">
-                <div style="position: absolute; left: 40%; align-content: center; padding-top: 2%">TILE 2</div>          
+                <div style="position: absolute; left: 20%; align-content: center; padding-top: 2%">Active Service Orders <%=OrderControlller.getActiveOrdersAndServiceByStatus("S")%></div>          
             </div>           
         </div>
         <div class="card text-white bg-primary mb-3" style="max-width: 20rem; position: absolute; left: 50%; top: 17%; width: 14%; height: 80px; z-index:-1;">
             <div style="position: absolute; left: 0%; align-content: center; padding-top: 6%; width: 100%; height: 80px;"  class="card-header">
-                <div style="position: absolute; left: 40%; align-content: center; padding-top: 2%"> TILE 3</div>          
-            </div>           
-        </div>
-        <div class="card text-white bg-primary mb-3" style="max-width: 20rem; position: absolute; left: 65%; top: 17%; width: 14%; height: 80px; z-index:-1;">
-            <div style="position: absolute; left: 0%; align-content: center; padding-top: 6%; width: 100%; height: 80px;"  class="card-header">
-                <div style="position: absolute; left: 40%; align-content: center; padding-top: 2%"> TILE 4</div>          
+                <div style="position: absolute; left: 20%; align-content: center; padding-top: 2%"> Active Product Orders <%=OrderControlller.getActiveOrdersAndServiceByStatus("P")%></div>          
             </div>           
         </div>
 
