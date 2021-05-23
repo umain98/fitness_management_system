@@ -48,7 +48,7 @@
                             <li class="active"><a href="gallery.jsp">Gallery</a></li>
                             <li><a href="contact.jsp">Contacts</a></li>
                             <li><a href="Reservation.jsp">Reservation</a></li>
-                            <li><a href="Registration.jsp">User Registration</a></li>
+                            <li><a href="user_registration.jsp">User Registration</a></li>
                             <li> <a href="shopping-cart.jsp"><i class="fa fa-shopping-cart" style="font-size: 50px;color: aliceblue"></a></i></li>
                         </ul>
                     </nav>

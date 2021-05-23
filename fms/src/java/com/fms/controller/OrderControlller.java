@@ -22,12 +22,12 @@ public class OrderControlller {
      order_id, order_id_string, order_date_time, order_item_qty, order_total_price, 
       order_total_discount, order_delivery_address, order_user_id, order_user_name
      */
-    public static boolean addOrder(String idString, Timestamp dateTime, int itemQty,
-            BigDecimal totalPrice, BigDecimal totalDiscount, String deliveryAddress, int userId, String userName, String type, String detail) throws SQLException {
+    public static boolean addOrder(String idString, int itemQty,
+            BigDecimal totalPrice, BigDecimal totalDiscount, String deliveryAddress, int userId, 
+            String userName, String type, String detail) throws SQLException {
         Order order = new Order();
         order.setIdString(idString);
-        order.setDateTime(dateTime);
-        order.setItemQty(itemQty);
+        order.setItemQty(1);
         order.setTotalPrice(totalPrice);
         order.setTotalDiscount(totalDiscount);
         order.setDeliveryAddress(deliveryAddress);

@@ -40,14 +40,14 @@
                 <div class="nav-menu">
                     <nav class="mainmenu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./about-us.html">About</a></li>
-                            <li><a href="./classes.html">Classes</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
-                            <li><a href="./gallery.html">Gallery</a></li>
-                            <li><a href="./contact.html">Contacts</a></li>
-                            <li><a href="./Reservation.html">Reservations</a></li>
-                            <li><a href="/Registration.html">User Registration</a></li>
+                            <li class="active"><a href="index.jsp">Home</a></li>
+                            <li><a href="about-us.jsp">About</a></li>
+                            <li><a href="classes.jsp">Classes</a></li>
+                            <li><a href="shop.jsp">Shop</a></li>
+                            <li><a href="gallery.jsp">Gallery</a></li>
+                            <li><a href="contact.jsp">Contacts</a></li>
+                            <li><a href="Reservation.jsp">Reservations</a></li>
+                            <li><a href="user_registration.jsp">User Registration</a></li>
                         </ul>
                     </nav>
                     <%

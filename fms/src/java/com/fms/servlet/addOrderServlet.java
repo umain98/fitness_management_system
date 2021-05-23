@@ -5,13 +5,21 @@
  */
 package com.fms.servlet;
 
+import com.fms.controller.OrderControlller;
+import com.fms.core.Validations;
+import com.fms.entity.User;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -34,15 +42,26 @@ public class addOrderServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String idString = request.getParameter("txtIdString");
-        String dateTime = request.getParameter("txtDateTime");
-        String itemQty = request.getParameter("txtItemQty");
-        String totalPrice = request.getParameter("txtTotalPrice");
-        String totalDiscount = request.getParameter("txtTotalDiscount");
-        String deliveryAddress = request.getParameter("txtDeliveryAddress");
-        String userId = request.getParameter("txtUserId");
-        String userName = request.getParameter("txtUserName");
+        HttpSession ses = request.getSession();
 
+        User user = (User) ses.getAttribute("cur_user");
+
+        if (user != null) {
+            String product = ses.getAttribute("product").toString();
+            String price = ses.getAttribute("price").toString();
+            String qty = ses.getAttribute("qty").toString();
+            String total = ses.getAttribute("total").toString();
+            String type = ses.getAttribute("type").toString();
+
+            try {
+                OrderControlller.addOrder("", 1, Validations.getBigDecimalOrZeroFromString(price),
+                        BigDecimal.ZERO, user.getAddress(), user.getUserId(), user.getEmail(), type, product);
+            } catch (SQLException ex) {
+                Logger.getLogger(addOrderServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+        response.sendRedirect("Success_msg.jsp");
     }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

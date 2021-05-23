@@ -66,7 +66,7 @@
                             <li><a href="contact.jsp">Contacts</a></li>
                             <li class="active"><a href="check-out.jsp">check-out</a></li>
                             <li><a href="Reservation.jsp">Reservations</a></li>
-                            <li><a href="Registration.jsp">User Registration</a></li>
+                            <li><a href="user_registration.jsp">User Registration</a></li>
                             <li> <a href="shopping-cart.jsp"><i class="fa fa-shopping-cart" style="font-size: 50px;color: aliceblue"></a></i></li>
                         </ul>
                     </nav>
@@ -112,7 +112,7 @@
         <!-- Cart Total Page Begin -->
         <section class="cart-total-page spad">
             <div class="container">
-                <form action="#" class="checkout-form">
+                <form action="payOnline.jsp" class="checkout-form">
                     <div class="row">
                         <div class="col-lg-12">
                             <h3>Your Information</h3>
@@ -185,16 +185,17 @@
                             <div class="payment-method">
                                 <h3>Payment Method</h3>
                                 <ul>
-                                    <li>Paypal <img src="img/paypal.jpg" alt="">  <span>
-                                            <label for="two"></label>
-                                            <input type="radio" id="two">
-                                        </span></li>
-                                    <li>
-                                        <label for="two">Cash on delivery</label>
-                                        <input type="radio" id="two">
-                                    </li>
+                                    <!--                                    <li>Paypal <img src="img/paypal.jpg" alt="">  <span>
+                                                                                <label for="two"></label>
+                                                                                <input type="radio" id="two">
+                                                                            </span></li>
+                                                                        <li>
+                                                                            <label for="two">Cash on delivery</label>
+                                                                            <input type="radio" id="two">
+                                                                        </li>-->
                                 </ul>
-                                <button type="submit">Pay Now</button>
+                                <!--<button type="submit">Pay Now</button>-->
+                                <input class="btn btn-primary btn-block py-2" type="submit" value="Pay Now">
                             </div>
                         </div>
                     </div>
