@@ -60,4 +60,16 @@ public class LogHistoryImpl {
         ps.close();
         return true;
     }
+
+    public int getLogHistroyCountByDayName(String dayName) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("select count(log_history_date_time) as day_name_count from log_history where DAYNAME(log_history_date_time)=?");
+        ps.setString(1, dayName);
+        ResultSet rset = ps.executeQuery();
+        int count = 0;
+        while (rset.next()) {
+            count = rset.getInt("day_name_count");
+        }
+        return count;
+    }
 }

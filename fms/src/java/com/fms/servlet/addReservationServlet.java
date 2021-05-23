@@ -8,6 +8,7 @@ package com.fms.servlet;
 import com.fms.controller.CommonController;
 import com.fms.controller.ReservationController;
 import com.fms.core.Validations;
+import com.fms.entity.User;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -18,6 +19,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -40,23 +42,27 @@ public class addReservationServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String reservationType = request.getParameter("txtReservType");
-        String reservationDate = request.getParameter("txtReservDate");
-        String reservationTime = request.getParameter("txtReservTime");
-        String reservationUserId = request.getParameter("txtReservUserId");
-        String reservationUserName = request.getParameter("txtReservUserName");
-        String reservationDetail = request.getParameter("txtReservDetail");
-        int userId = 0;
-        String userName = "";
-        try {
-            //YYYY-MM-DD hh:mm:ss
-            ReservationController.addReservation(reservationType, reservationDate, reservationTime,
-                    userId, userName, "A", reservationDetail);
-        } catch (SQLException ex) {
-            Logger.getLogger(addReservationServlet.class.getName()).log(Level.SEVERE, null, ex);
+        HttpSession ses = request.getSession();
+        User user = (User) ses.getAttribute("cur_user");
+
+        if (user != null) {
+            String reservationType = request.getParameter("txtReservType");
+            String reservationDate = request.getParameter("reservationdate");
+            String reservationTime = request.getParameter("reservationtime");
+            String reservationDetail = request.getParameter("txtReservDetail");
+
+            try {
+                //YYYY-MM-DD hh:mm:ss
+                ReservationController.addReservation(reservationType, reservationDate, reservationTime,
+                        user.getUserId(), user.getEmail(), "A", reservationDetail);
+            } catch (SQLException ex) {
+                Logger.getLogger(addReservationServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            response.sendRedirect("Reservation.jsp");
+        } else {
+            response.sendRedirect("login.jsp");
         }
 
-        response.sendRedirect("reservation_registration.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

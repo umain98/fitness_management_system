@@ -37,13 +37,17 @@ public class LogHistoryController {
         loghistory.setStatus(status);
         return new LogHistoryImpl().updateLogHistoryById(loghistory);
     }
-    
-    public static boolean deleteLogHistoryById(int historyId) throws SQLException{
+
+    public static boolean deleteLogHistoryById(int historyId) throws SQLException {
         return new LogHistoryImpl().deleteLogHistoryById(historyId);
     }
-    
-    public static ResultSet getAllLogHistoryRecords() throws SQLException{
+
+    public static ResultSet getAllLogHistoryRecords() throws SQLException {
         return new LogHistoryImpl().getAllLogHistoryRecords();
     }
-    
+
+    public static int getLogHistroyCountByDayName(String dayName) throws SQLException {
+        return new LogHistoryImpl().getLogHistroyCountByDayName(dayName);
+    }
+
 }

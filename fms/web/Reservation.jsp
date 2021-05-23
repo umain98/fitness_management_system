@@ -104,7 +104,7 @@
                 <!-- For Demo Purpose -->
                 <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
                     <img src="img/gallery/gallery-2.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
-                    <h1>Create an Account</h1>
+                    
                     <p class="font-italic text-muted mb-0">Due to Covid 19 situation we've created a reservation form for your treadmill usage cause it wll reduce the crowd and also make easy way for your time schedule.</p>
                     <p class="font-italic text-muted"> 
                     </p>
@@ -112,9 +112,9 @@
 
                 <!-- Registration Form -->
                 <div class="col-md-7 col-lg-6 ml-auto">
-                    <form action="#">
+                    <form action="addReservationServlet">
                         <div class="row">
-
+                            
                             
                             <div class="input-group col-lg-12 mb-4">
                                 <div class="input-group-prepend">
@@ -177,9 +177,7 @@
 
                             <!-- Submit Button -->
                             <div class="form-group col-lg-12 mx-auto mb-0">
-                                <a href="#" class="btn btn-primary btn-block py-2">
-                                    <span class="font-weight-bold">Reserve Now</span>
-                                </a>
+                                <input class="btn btn-primary btn-block py-2" type="submit" value="Reserv Now">
                             </div>
 
                         </div>

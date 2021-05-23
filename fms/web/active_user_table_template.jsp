@@ -1,3 +1,4 @@
+<%@page import="com.fms.controller.ReservationController"%>
 <%@page import="com.fms.controller.UserController"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -75,6 +76,41 @@
                             </form>
                         </td>
                     </tr>  
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
+        </div>
+        <div style="position: absolute; left: 20%; top: 60%; width: 30%; height: 5%">
+            <h4 style="color: #000000"><b>Tredmil Reservation</b></h4>
+        </div>
+        <div style="position: absolute; left: 20%; top: 65%; width: 37%; height: 10%">
+
+            <%
+                ResultSet rset5 = ReservationController.getAllReservationRecords();
+                //, reservation_type, , , reservation_user_id, , reservation_status, reservation_detail
+            %>
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">#ID</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Reserved Date</th>
+                        <th scope="col">Reserved Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        while (rset5.next()) {
+                    %>
+                    <tr>
+                        <th scope="row"><%=rset5.getString("reservation_id")%></th>
+                        <td><%=rset5.getString("reservation_user_name")%></td>
+                        <td><%=rset5.getString("reservation_date")%></td>
+                        <td><%=rset5.getString("reservation_time")%></td>
+
+                    </tr>   
                     <%
                         }
                     %>

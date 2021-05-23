@@ -1,33 +1,26 @@
+<%@page import="com.fms.controller.LogHistoryController"%>
+<%@page import="com.fms.core.Validations"%>
 <%@page import="java.math.BigDecimal"%>
 <!DOCTYPE HTML>
 <html>
     <head>
         <%
-            BigDecimal janValue = BigDecimal.ZERO;
-            BigDecimal febValue = BigDecimal.ZERO;
-            BigDecimal marValue = BigDecimal.ZERO;
-            BigDecimal aprValue = BigDecimal.ZERO;
-            BigDecimal mayValue = BigDecimal.ZERO;
-            BigDecimal junValue = BigDecimal.ZERO;
-            BigDecimal julValue = BigDecimal.ZERO;
-            BigDecimal augValue = BigDecimal.ZERO;
-            BigDecimal sepValue = BigDecimal.ZERO;
-            BigDecimal octValue = BigDecimal.ZERO;
-            BigDecimal novValue = BigDecimal.ZERO;
-            BigDecimal decValue = BigDecimal.ZERO;
+            BigDecimal Sunday = Validations.getBigDecimalOrZeroFromString(Integer.toString(LogHistoryController.getLogHistroyCountByDayName("Sunday")));
+            BigDecimal Monday = Validations.getBigDecimalOrZeroFromString(Integer.toString(LogHistoryController.getLogHistroyCountByDayName("Monday")));
+            BigDecimal Tuesday = Validations.getBigDecimalOrZeroFromString(Integer.toString(LogHistoryController.getLogHistroyCountByDayName("Tuesday")));
+            BigDecimal Wednesday = Validations.getBigDecimalOrZeroFromString(Integer.toString(LogHistoryController.getLogHistroyCountByDayName("Wednesday")));
+            BigDecimal Thursday = Validations.getBigDecimalOrZeroFromString(Integer.toString(LogHistoryController.getLogHistroyCountByDayName("Thursday")));
+            BigDecimal Friday = Validations.getBigDecimalOrZeroFromString(Integer.toString(LogHistoryController.getLogHistroyCountByDayName("Friday")));
+            BigDecimal Saturday = Validations.getBigDecimalOrZeroFromString(Integer.toString(LogHistoryController.getLogHistroyCountByDayName("Saturday")));
 
-            janValue = new BigDecimal(20000);
-            febValue = new BigDecimal(10000);
-            marValue = new BigDecimal(5000);
-            aprValue = new BigDecimal(30000);
-            mayValue = new BigDecimal(30000);
-            junValue = new BigDecimal(40000);
-            julValue = new BigDecimal(50000);
-            augValue = new BigDecimal(60000);
-            sepValue = new BigDecimal(10000);
-            octValue = new BigDecimal(10000);
-            novValue = new BigDecimal(20000);
-            decValue = new BigDecimal(90000);
+//
+//            janValue = new BigDecimal(20000);
+//            febValue = new BigDecimal(10000);
+//            marValue = new BigDecimal(5000);
+//            aprValue = new BigDecimal(30000);
+//            mayValue = new BigDecimal(30000);
+//            junValue = new BigDecimal(40000);
+
         %>
         <script>
             window.onload = function () {
@@ -47,18 +40,13 @@
                             indexLabelPlacement: "outside",
                             dataPoints: [
 
-                                {x: 10, y: <%= janValue%>, indexLabel: "Jan"},
-                                {x: 20, y: <%= febValue%>, indexLabel: "Feb"},
-                                {x: 30, y: <%= marValue%>, indexLabel: "Mar"},
-                                {x: 40, y: <%= aprValue%>, indexLabel: "Apr"},
-                                {x: 50, y: <%= mayValue%>, indexLabel: "May"},
-                                {x: 60, y: <%= junValue%>, indexLabel: "Jun"},
-                                {x: 70, y: <%= julValue%>, indexLabel: "Jul"},
-                                {x: 80, y: <%= augValue%>, indexLabel: "Aug"},
-                                {x: 90, y: <%= sepValue%>, indexLabel: "Sep"},
-                                {x: 100, y: <%= octValue%>, indexLabel: "Oct"},
-                                {x: 110, y: <%= novValue%>, indexLabel: "Nov"},
-                                {x: 120, y: <%= decValue%>, indexLabel: "Dec"}
+                                {x: 1, y: <%= Sunday%>, indexLabel: "Sunday"},
+                                {x: 2, y: <%= Monday%>, indexLabel: "Monday"},
+                                {x: 3, y: <%= Tuesday%>, indexLabel: "Tuesday"},
+                                {x: 4, y: <%= Wednesday%>, indexLabel: "Wednesday"},
+                                {x: 5, y: <%= Thursday%>, indexLabel: "Thursday"},
+                                {x: 6, y: <%= Friday%>, indexLabel: "Friday"},
+                                {x: 7, y: <%= Saturday%>, indexLabel: "Saturday"},
                             ]
                         }]
                 });
@@ -84,7 +72,7 @@
     </head>
     <body>
         <div class="form-group" style="position: absolute; left: 60%; top: 30%; width: 37%; height: 15px">
-            <h4><b>TITLE -BAR CHART</b></h4>
+            <h4><b>SITE USAGE -BAR CHART</b></h4>
         </div>
         <div id="chartContainer"  style="position: absolute; left: 60%; top: 35%;  height: 450px; width: 37%;"></div>
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
