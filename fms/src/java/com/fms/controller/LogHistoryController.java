@@ -18,9 +18,8 @@ import java.sql.Timestamp;
 public class LogHistoryController {
     //log_history_id, log_history_date_time, log_history_user_id, log_history_user_name, log_history_detail, log_history_status
 
-    public static boolean addLogHistory(Timestamp dateTime, int userId, String userName, String detail, String status) throws SQLException {
+    public static boolean addLogHistory(int userId, String userName, String detail, String status) throws SQLException {
         LogHistory loghistory = new LogHistory();
-        loghistory.setDateTime(dateTime);
         loghistory.setUserId(userId);
         loghistory.setUserName(userName);
         loghistory.setDetail(detail);

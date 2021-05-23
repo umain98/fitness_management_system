@@ -5,20 +5,26 @@
  */
 package com.fms.servlet;
 
+import com.fms.controller.UserController;
+import com.fms.core.Validations;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author USER
  */
-@WebServlet(name = "addLogHistoryServlet", urlPatterns = {"/addLogHistoryServlet"})
-public class addLogHistoryServlet extends HttpServlet {
+@WebServlet(name = "deleteUserServlet", urlPatterns = {"/deleteUserServlet"})
+public class deleteUserServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,7 +40,15 @@ public class addLogHistoryServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        
+        HttpSession ses = request.getSession();
+        int id = Validations.getIntOrZeroFromString(ses.getAttribute("delete_user_id").toString());
+        response.sendRedirect("dashboard.jsp");
+
+        try {
+            UserController.deleteUserById(id);
+        } catch (SQLException ex) {
+            Logger.getLogger(deleteUserServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 

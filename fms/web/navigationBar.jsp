@@ -37,10 +37,10 @@
                         <a class="nav-link" href="dashboard_products_orders.jsp">Product Orders </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="clientManagement.jsp">Service Orders</a>
+                        <a class="nav-link" href="dashboard_service_orders.jsp">Service Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="addIssueCheque.jsp">User Management</a>
+                        <a class="nav-link" href="user_registration.jsp">User Registration</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="addUser.jsp">Schedule </a>

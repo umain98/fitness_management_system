@@ -18,18 +18,16 @@ import java.sql.SQLException;
  */
 public class LogHistoryImpl {
 
-    private String selectQuery = "SELECT * FROM gallery";
+    private String selectQuery = "SELECT * FROM log_history";
 
     //log_history_id, log_history_date_time, log_history_user_id, log_history_user_name, log_history_detail, log_history_status
     public boolean addLogHistory(LogHistory loghistroty) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("insert into log_history( log_history_date_time, "
-                + "log_history_user_id, log_history_user_name, log_history_detail, log_history_status) values(?,?,?,?,?)");
-        ps.setTimestamp(1, loghistroty.getDateTime());
-        ps.setInt(2, loghistroty.getUserId());
-        ps.setString(3, loghistroty.getUserName());
-        ps.setString(4, loghistroty.getDetail());
-        ps.setString(5, loghistroty.getStatus());
+        PreparedStatement ps = con.prepareStatement("insert into log_history(log_history_user_id, log_history_user_name, log_history_detail, log_history_status) values(?,?,?,?)");
+        ps.setInt(1, loghistroty.getUserId());
+        ps.setString(2, loghistroty.getUserName());
+        ps.setString(3, loghistroty.getDetail());
+        ps.setString(4, loghistroty.getStatus());
         ps.executeUpdate();
         ps.close();
         return true;

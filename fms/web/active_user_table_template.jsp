@@ -1,3 +1,4 @@
+<%@page import="com.fms.controller.UserController"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -39,26 +40,47 @@
             <h4 style="color: #000000"><b>Active Users</b></h4>
         </div>
         <div style="position: absolute; left: 20%; top: 35%; width: 37%; height: 10%">
-            <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                <table class="table table-bordered table-striped mb-0">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col"><i class="fas fa-image mr-2 grey-text" aria-hidden="true"></i>User Name</th>
-                            <th scope="col"><i class="fas fa-book mr-2 grey-text" aria-hidden="true"></i>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            
-                        <tr>
-                            <th scope="row"></th>
-                            <td>test user</td>
-                            <td>testmail@google.com</td>
-                        </tr>
-                
-                    </tbody>
-                </table>
-            </div>
+
+            <%
+                ResultSet rset = UserController.getAllUserRecords();
+                //, , user_last_name, user_contact, , user_address, user_reg_date, user_date_of_birth, user_height_cm, user_weight_kg, 
+                //user_status, user_detail, user_password
+            %>
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">#User ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%                        while (rset.next()) {
+                    %>
+                    <tr>
+                        <th scope="row"><%=rset.getString("user_id")%></th>
+                        <td><%=rset.getString("user_first_name")%></td>
+                        <td><%=rset.getString("user_email")%></td>
+                        <td>
+                            <form action="deleteUserServlet">
+                                <%
+                                    HttpSession ses = request.getSession();
+                                    int id = rset.getInt("user_id");
+                                    ses.setAttribute("delete_user_id", id);
+                                %>
+                                <!--                                <button type="button" class="btn btn-danger btn-sm px-3">
+                                                                    <i class="fas fa-times"></i>
+                                                                </button>-->
+                                <input class="btn btn-danger btn-block py-2" type="submit" value="Delete Order">
+                            </form>
+                        </td>
+                    </tr>  
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
