@@ -116,7 +116,7 @@
 
         <div class="card text-white bg-primary mb-3" style="max-width: 20rem; position: absolute; left: 20%; top: 17%; width: 14%; height: 80px; z-index:-1;">
             <div style="position: absolute; left: 0%; align-content: center; padding-top: 6%; width: 100%; height: 80px;"  class="card-header">
-                <div style="position: absolute; left: 40%; align-content: center; padding-top: 2%">TILE 1</div>          
+                <div style="position: absolute; left: 20%; align-content: center; padding-top: 2%">Registered User Count <%=UserController.getAllCount()%></div>          
             </div>           
         </div>
         <div class="card text-white bg-primary mb-3" style="max-width: 20rem; position: absolute; left: 35%; top: 17%; width: 14%; height: 80px; z-index:-1;">

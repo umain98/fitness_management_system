@@ -70,4 +70,8 @@ public class UserController {
         return new UserImpl().getUserByUserNameAndPassword(uname, pw);
     }
 
+    public static int getAllCount() throws SQLException {
+        return new UserImpl().getAllCount();
+    }
+
 }

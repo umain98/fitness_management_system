@@ -7,6 +7,7 @@ package com.fms.servlet;
 
 import com.fms.controller.ScheduleController;
 import com.fms.core.Validations;
+import com.fms.entity.User;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -17,6 +18,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -39,21 +41,21 @@ public class addScheduleServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String scheduleCreatedById = request.getParameter("txtCreatedById");
-        String scheduleCreatedByName = request.getParameter("txtCreatedByName");
+        HttpSession ses = request.getSession();
+        User user = (User) ses.getAttribute("cur_user");
+
         String scheduleStartDate = request.getParameter("txtStartDate");
         String scheduleEndDate = request.getParameter("txtEndDate");
         String scheduleDaysPerWeek = request.getParameter("txtDaysPerWeek");
         String scheduleFor = request.getParameter("txtScheduleFor");
         String scheduleSpecialNote = request.getParameter("txtSpecialFor");
-        String scheduleDetail = request.getParameter("txtDetail");
 
         int userId = 0;
         String userName = "";
         try {
-            ScheduleController.addSchedule(userId, scheduleCreatedByName, scheduleStartDate,
+            ScheduleController.addSchedule(user.getUserId(), user.getEmail(), scheduleStartDate,
                     scheduleEndDate, Validations.getIntOrZeroFromString(scheduleDaysPerWeek),
-                    scheduleFor, scheduleSpecialNote, "A", scheduleDetail);
+                    scheduleFor, scheduleSpecialNote, "P", "");
         } catch (SQLException ex) {
             Logger.getLogger(addScheduleServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

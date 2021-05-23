@@ -1,3 +1,4 @@
+<%@page import="com.fms.controller.LogHistoryController"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -39,16 +40,23 @@
             <div style="position: absolute; left: 5%; top: 5%; width: 70%; height: 5%">
                 <h4 style="color: #000000"><b>Login History</b></h4>
             </div>
+            <%
+                ResultSet rset3 = LogHistoryController.getAllLogHistoryRecords();
+
+            %>
+
             <div style="position: absolute; left: 5%; top: 15%; width: 90%; height: 90%">
                 <div class="table-wrapper-scroll-y my-custom-scrollbar-lh">
                     <table class="table table-bordered table-striped mb-0">
                         <tbody>
+                            <%                                while (rset3.next()) {
+                            %>
+
                             <tr>
-                                <td>11111</td>
+                                <td><%=rset3.getString("log_history_user_name")%></td> 
                             </tr>
-                            <tr>
-                                <td>2222</td>
-                            </tr>
+                            <%                                }
+                            %>
                         </tbody>
                     </table>
                 </div>

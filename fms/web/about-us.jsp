@@ -1,3 +1,4 @@
+<%@page import="com.fms.controller.UserController"%>
 <!DOCTYPE html>
 <html >
 
@@ -119,7 +120,7 @@
                                 <p>Branches</p>
                             </div>
                             <div class="single-counter">
-                                <h1 class="counter-num count">100</h1>
+                                <h1 class="counter-num count"><%=UserController.getAllCount()%></h1>
                                 <span>+</span>
                                 <p>Members</p>
                             </div>

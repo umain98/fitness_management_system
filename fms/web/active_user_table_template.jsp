@@ -42,9 +42,7 @@
         <div style="position: absolute; left: 20%; top: 35%; width: 37%; height: 10%">
 
             <%
-                ResultSet rset = UserController.getAllUserRecords();
-                //, , user_last_name, user_contact, , user_address, user_reg_date, user_date_of_birth, user_height_cm, user_weight_kg, 
-                //user_status, user_detail, user_password
+                ResultSet rset2 = UserController.getAllUserRecords();
             %>
             <table class="table align-middle">
                 <thead>
@@ -56,17 +54,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <%                        while (rset.next()) {
+                    <%
+                        while (rset2.next()) {
                     %>
                     <tr>
-                        <th scope="row"><%=rset.getString("user_id")%></th>
-                        <td><%=rset.getString("user_first_name")%></td>
-                        <td><%=rset.getString("user_email")%></td>
+                        <th scope="row"><%=rset2.getString("user_id")%></th>
+                        <td><%=rset2.getString("user_first_name")%></td>
+                        <td><%=rset2.getString("user_email")%></td>
                         <td>
                             <form action="deleteUserServlet">
                                 <%
                                     HttpSession ses = request.getSession();
-                                    int id = rset.getInt("user_id");
+                                    int id = rset2.getInt("user_id");
                                     ses.setAttribute("delete_user_id", id);
                                 %>
                                 <!--                                <button type="button" class="btn btn-danger btn-sm px-3">

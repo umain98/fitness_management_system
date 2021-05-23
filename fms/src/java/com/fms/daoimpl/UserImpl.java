@@ -61,6 +61,17 @@ public class UserImpl {
         return true;
     }
 
+    public int getAllCount() throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("select count(user_id) as user_count from users");
+        int count = 0;
+        ResultSet rset = ps.executeQuery();
+        while (rset.next()) {
+            count = rset.getInt("user_count");
+        }
+        return count;
+    }
+
     public boolean updateUserById(User user) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("update users set user_first_name=?, "
