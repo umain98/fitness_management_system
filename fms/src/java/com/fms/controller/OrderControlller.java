@@ -23,7 +23,7 @@ public class OrderControlller {
       order_total_discount, order_delivery_address, order_user_id, order_user_name
      */
     public static boolean addOrder(String idString, int itemQty,
-            BigDecimal totalPrice, BigDecimal totalDiscount, String deliveryAddress, int userId, 
+            BigDecimal totalPrice, BigDecimal totalDiscount, String deliveryAddress, int userId,
             String userName, String type, String detail) throws SQLException {
         Order order = new Order();
         order.setIdString(idString);
@@ -60,5 +60,9 @@ public class OrderControlller {
 
     public static ResultSet getAllOrderRecords() throws SQLException {
         return new OrderImpl().getAllOrderRecords();
+    }
+
+    public static ResultSet getOrderByStatus(String status) throws SQLException {
+        return new OrderImpl().getOrdersByStatus(status);
     }
 }

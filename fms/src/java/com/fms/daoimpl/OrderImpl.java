@@ -48,11 +48,18 @@ public class OrderImpl {
 
     public boolean deleteOrderById(int id) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("delete from order where order_id=?");
+        PreparedStatement ps = con.prepareStatement("delete from orders where order_id=?");
         ps.setInt(1, id);
         ps.executeUpdate();
         ps.close();
         return true;
+    }
+
+    public ResultSet getOrdersByStatus(String status) throws SQLException {
+        Connection con = DatabaseConnection.getDatabaseConnection();
+        PreparedStatement ps = con.prepareStatement("select * from orders where order_type=?");
+        ps.setString(1, status);
+        return ps.executeQuery();
     }
 
     public boolean updateOrderById(Order order) throws SQLException {

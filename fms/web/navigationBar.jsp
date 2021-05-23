@@ -23,7 +23,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
     </head>
     <body>
-     
+
         <nav class="navbar card text-white bg-info mb-3 fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar ">
             <a class="navbar-brand" href="dashboard.jsp"><strong>DASHBOARD<span class="sr-only">(current)</span></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -32,30 +32,30 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-            
+
                     <li class="nav-item">
-                        <a class="nav-link" href="userManagement.jsp">Link 1        |  </a>
+                        <a class="nav-link" href="dashboard_products_orders.jsp">Product Orders </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="clientManagement.jsp">  Link 1          |</a>
+                        <a class="nav-link" href="clientManagement.jsp">Service Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="addIssueCheque.jsp">   Link 1          |</a>
+                        <a class="nav-link" href="addIssueCheque.jsp">User Management</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="addUser.jsp">   Link 1    </a>
+                        <a class="nav-link" href="addUser.jsp">Schedule </a>
                     </li>
-<!--                    <li class="nav-item">
-                        <a class="nav-link" href="addClient.jsp">Add Clients</a>
-                    </li>-->
-              
+                    <!--                    <li class="nav-item">
+                                            <a class="nav-link" href="addClient.jsp">Add Clients</a>
+                                        </li>-->
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link 1 </a>
+                        <a class="nav-link" href="#">Time Table</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link 1 </a>
+                        <a class="nav-link" href="#">Trainers</a>
                     </li>
-             
+
 
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
@@ -75,17 +75,17 @@
                         <%
 //                            if (user != null) {
                         %>
-                    <li><a href="#" style="color: #ffffff"><span class="glyphicon glyphicon-log-in"></span><b>Hi, User</b> </a></li>
+                    <li><a href="#" style="color: #ffffff"><span class="glyphicon glyphicon-log-in"></span><b>Hi, Admin</b> </a></li>
                                 <%
 //                                    } else {
 //                                        response.sendRedirect("login.jsp");
 //                                    }
-                                %>
+%>
                     </li>
                 </ul>
                 <ul class="navbar-nav nav-flex-icons" style="position: absolute; left: 90%; top: 58%; width: 300px; height: 60px;">
                     <li class="nav-item">
-                    <li><a href="login.jsp" style="color: #ffffff"><span class="glyphicon glyphicon-log-in"></span><b>Log out</b> </a></li>
+                    <li><a href="logout" style="color: #ffffff"><span class="glyphicon glyphicon-log-in"></span><b>Log out</b> </a></li>
                     </li>
                 </ul>
             </div>

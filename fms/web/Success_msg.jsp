@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body>
-        <div style="position: absolute; align-content: center; left: 25%">
+        <div style="position: absolute; align-content: center; left: 33%">
             <img src="img/payment-success.png" alt=""width=700px>
         </div>
         <div style="position: relative; left: 42%; top: 85%; width: 12%; height: 30px;">
